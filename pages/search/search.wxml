@@ -1,0 +1,25 @@
+<!--pages/search/search.wxml-->
+<view class='topSearch'>
+    <view class='searchCon'>
+        <input placeholder-class="phcolor" type='text' placeholder='北京  上海  线路' />
+        <view class='cancelBtn'>取消</view>
+    </view>
+</view>
+<view class='seaHistory'>
+    <text>历史搜索</text>
+    <view class='seaHistoryCon'>
+    <block wx:for='{{ historylist }}' wx:key='{{ item.title }}'>
+        <view class='seaWord'>{{ item.title }}</view>
+    </block>
+    </view>
+</view>
+<view class='p20'>
+    <view class='ss_wnsb_1'>未能识别</view>
+    <view class='ss_wnsb_2'>你可以这样说</view>
+    <view class='ss_wnsb_3'>北京到上海的线路</view>
+    <view class='ss_wnsb_3'>北京到广州的线路</view>
+</view>
+<view class='yysb_1'>
+    <view class='yysb_2'>语音识别中...</view>
+    <view class='yysb_3'>10s</view>
+</view>

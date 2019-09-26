@@ -1,0 +1,10 @@
+<!--pages/edit/index.wxml-->
+<view class='infoBox'>
+  <text class='itxtCur'>实体店店主</text>
+  <text class='itxt'>微商店主</text>
+  <text class='itxt'>国内店商</text>
+  <text class='itxt'>跨界电商</text>
+  <text class='itxt'>贸易公司</text>
+  <text class='itxt'>生产加工企业</text>
+  <text class='itxt'>其他</text>
+</view>

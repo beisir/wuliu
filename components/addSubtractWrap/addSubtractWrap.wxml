@@ -1,0 +1,6 @@
+<!--components/addSubtractWrap/addSubtractWrap.wxml-->
+<view class='add-subtrack-wrap'>
+  <view data-type="reduce" bindtap='_changeNum' class='subtract button j_ico1'>-</view>
+  <slot/>
+  <view data-type="add" bindtap='_changeNum' class='add button j_ico2'>+</view>
+</view>

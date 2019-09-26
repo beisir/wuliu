@@ -1,0 +1,19 @@
+/* pages/screening/screening.wxss */
+page{height:100%;background:#f7f7f7;}
+.screeningBox{overflow:hidden;background:#f7f7f7;height:100%; padding:20rpx;}
+.screeningTop,.screeningBot{ background: #fff; border-radius:10rpx; padding: 20rpx 25rpx; font-size: 30rpx; color: #333;}
+.screeningTop text{ display: block; line-height:72rpx;}
+.discountCon{ line-height: 72rpx;}
+.screeningTop text:after{ content:''; float: right; display: block;height:72rpx; width:72rpx; background:url(https://style.org.hc360.com/images/logistics/s-program/wlIco2.png) 45rpx -125rpx no-repeat; background-size:300rpx 600rpx;}
+.discountCon icon{ display: block; height:40rpx; width: 76rpx; float: right;background:url(https://style.org.hc360.com/images/logistics/s-program/wlIco2.png) 0rpx -243rpx no-repeat; background-size:300rpx 600rpx; margin-top:20rpx;}
+.discountCon icon.openIco{background:url(https://style.org.hc360.com/images/logistics/s-program/wlIco2.png) 0rpx -288rpx no-repeat; background-size:300rpx 600rpx;}
+.screeningBot{ margin-top: 25rpx;}
+.sBotlist{ overflow: hidden; height:80rpx; line-height: 80rpx;}
+.sBotlist text{ float: left;}
+.sBotlist input{ float: left; width:202rpx;border-bottom: 1px solid #f7f7f7; margin: 0 15rpx; height:78rpx; text-align: center; color: #666;}
+.sBotlist input.w180{width:172rpx;}
+.btnBox{ overflow: hidden; height: 80rpx; border-radius: 10rpx; margin-top:20rpx;}
+.btnBox button{width: 50%; border:none; color:#fff; border-radius: 0; font-size: 34rpx; text-align: center; background: #a7a7a7; padding:0; float: left;}
+.btnBox button.redBtn{ background: #fd473c;}
+
+

@@ -1,0 +1,11 @@
+/* pages/sqy/sqy.wxss */
+.sqy_img{background:url(http://192.168.54.32/images/logistics/s-program/bg_2.png) no-repeat; background-size: 242rpx 242rpx; width: 242rpx; height: 242rpx; margin: 160rpx auto 0 auto;}
+.sqy_1{ text-align: center; font-size: 40rpx; color: #333; line-height: 50rpx; padding: 20rpx 0;}
+.sqy_2{ text-align: center;font-size: 28rpx; color: #999; margin-bottom: 50rpx;}
+.sqy_box{ width: 90%; border-top: 1px #e8e8e8 solid; margin: 0 auto; padding-top: 50rpx;}
+.sqy_3{ font-size: 28rpx; color: #999; margin-bottom: 20rpx;}
+
+.sqy_btn1{ width: 45%; height: 86rpx; text-align: center; background: #dddddd; color: #666; line-height: 86rpx; border-radius: 40rpx; float: left; margin-top: 60rpx; cursor: pointer; font-size: 32rpx;}
+.sqy_btn2{ width: 45%; height: 86rpx; text-align: center; background: #ff5a33; color: #fff; line-height: 86rpx; border-radius: 40rpx; float: right;margin-top: 60rpx;cursor: pointer;font-size: 32rpx;}
+
+

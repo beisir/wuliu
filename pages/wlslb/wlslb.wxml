@@ -1,0 +1,8 @@
+<!--pages/wlslb/wlslb.wxml-->
+<view class='p20'>
+ <view class='b_r_1'>
+  <view class='wlslb_1'>德邦</view>
+  <view class='wlslb_1'>华宇天地</view>
+  <view class='wlslb_1'>卡行天下</view>
+ </view>
+</view>

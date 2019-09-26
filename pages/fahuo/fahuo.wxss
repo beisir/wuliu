@@ -1,0 +1,443 @@
+/* pages/fahuo/fahuo.wxss */
+
+.fhbox {
+  margin: 20rpx;
+  background: #fff;
+  border-radius: 15rpx;
+  position: relative;
+  padding: 0 20rpx;
+}
+
+.fhbox_1 {
+  width: 22rpx;
+  height: 150rpx;
+  border-right: 1px #f7f7f7 solid;
+  position: absolute;
+  left: 0;
+  top: 60rpx;
+}
+
+.fhbox_3 {
+  width: 12rpx;
+  height: 12rpx;
+  background: #4cb5ff;
+  border-radius: 20rpx;
+  position: absolute;
+  left: 19rpx;
+  top: 200rpx;
+}
+
+.fhbox_4_2 {
+  width: 75%;
+  font-size: 26rpx;
+  color: #666;
+  height: 40rpx;
+  line-height: 40rpx;
+  padding-left: 40rpx;
+}
+
+.xj_box_btn {
+  background: url(https://style.org.hc360.com/images/logistics/s-program/ico54.png) no-repeat;
+  width: 54rpx;
+  height: 54rpx;
+  background-size: 54rpx 54rpx;
+  position: absolute;
+  right: 120rpx;
+  bottom: 0;
+}
+
+.fhbox_6 {
+  height: 60rpx;
+  line-height: 60rpx;
+  margin: 20rpx;
+  background: #fff;
+  border-radius: 15rpx;
+  position: relative;
+  padding: 0 20rpx;
+}
+
+.fhbox_6_1 {
+  font-size: 22rpx;
+  color: #666;
+  height: 60rpx;
+  line-height: 60rpx;
+  position: relative;
+}
+
+.fhbox_6_1::after {
+  content: '';
+  position: absolute;
+  top: 0rpx;
+  right: 0rpx;
+  display: block;
+  background: url(https://style.org.hc360.com/images/logistics/s-program/ico42.png) no-repeat;
+  width: 50rpx;
+  height: 60rpx;
+  background-size: 50rpx 60rpx;
+  float: right;
+}
+
+.fhbox_6_2 {
+  font-size: 22rpx;
+  color: #666;
+  height: 60rpx;
+  line-height: 60rpx;
+  position: relative;
+}
+
+.fhbox_6_2::after {
+  content: '';
+  position: absolute;
+  top: 0rpx;
+  right: 0rpx;
+  display: block;
+  background: url(https://style.org.hc360.com/images/logistics/s-program/ico43.png) no-repeat;
+  width: 50rpx;
+  height: 60rpx;
+  background-size: 50rpx 60rpx;
+  float: right;
+}
+
+.fhbox_7 {
+  clear: both;
+  position: relative;
+  left: 150rpx;
+  top: 290rpx;
+}
+
+.fhbox_7_1 {
+  clear: both;
+  height: 54rpx;
+  line-height: 54rpx;
+  position: relative;
+  left: 140rpx;
+}
+
+.fhbox_7_2 {
+  font-size: 24rpx;
+  color: #ff6f66;
+  float: left;
+}
+
+.fhbox_7_1::after {
+  content: '';
+  position: absolute;
+  top: 0rpx;
+  left: -50rpx;
+  display: block;
+  background: url(https://style.org.hc360.com/images/logistics/s-program/ico45.png) no-repeat;
+  width: 50rpx;
+  height: 60rpx;
+  background-size: 50rpx 60rpx;
+  float: left;
+}
+
+.fhbox_7_3 {
+  float: left;
+  width: 60rpx;
+  position: relative;
+}
+
+.fhbox_7_3::after {
+  content: '';
+  position: absolute;
+  top: 0rpx;
+  right: -70rpx;
+  display: block;
+  background: url(https://style.org.hc360.com/images/logistics/s-program/ico44.png) no-repeat;
+  width: 50rpx;
+  height: 60rpx;
+  background-size: 50rpx 60rpx;
+  float: left;
+}
+
+.fahuo_cd {
+  clear: both;
+  width: 520rpx;
+  height: 190rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  margin-top: 70rpx;
+  position: relative;
+}
+
+.fahuo_cd_1 {
+  clear: both;
+  width: 100%;
+  padding: 20rpx;
+}
+
+.fahuo_box1 {
+  font-size: 26rpx;
+  color: #333;
+  float: left;
+}
+
+.fahuo_box2 {
+  font-size: 26rpx;
+  color: #5803ac;
+  float: left;
+  height: 30rpx;
+  border: 1px #5803ac solid;
+  text-align: center;
+  line-height: 30rpx;
+  float: left;
+  border-radius: 20rpx;
+  padding: 0 20rpx;
+  margin-left: 20rpx;
+}
+
+.fahuo_box3 {
+  width: 70rpx;
+  height: 70rpx;
+  position: absolute;
+  right: 0rpx;
+  top: 0rpx;
+  background: #eee;
+  border-radius: 0 0 0 100%;
+  text-align:right;
+}
+
+.fahuo_cd_2 {
+  clear: both;
+  font-size: 24rpx;
+  color: #666;
+  padding: 20rpx;
+}
+
+.fahuo_cd_3 {
+  clear: both;
+  font-size: 24rpx;
+  color: #666;
+  padding: 0 20rpx;
+}
+
+.fahuo_box4 {
+  float: left;
+  font-size: 24rpx;
+  color: #666;
+}
+
+.fahuo_box5 {
+  float: left;
+  font-size: 24rpx;
+  color: #666;
+}
+
+.fahuo_cd_4 {
+  background: url(https://style.org.hc360.com/images/logistics/s-program/ico47.png) no-repeat;
+  width: 78rpx;
+  height: 78rpx;
+  background-size: 78rpx 78rpx;
+  text-align: center;
+  line-height: 78rpx;
+  color: #fff;
+  font-size: 24rpx;
+  position: absolute;
+  right: 0;
+  bottom: -20rpx;
+  cursor: pointer;
+}
+
+/* 修改 */
+
+.fhbox {
+  margin: 20rpx;
+  background: #fff;
+  border-radius: 15rpx;
+  position: relative;
+  padding: 10rpx 20rpx 20rpx 20rpx;
+}
+
+.fhbox_1 {
+  width: 22rpx;
+  height: 150rpx;
+  border-right: 1px #f7f7f7 solid;
+  position: absolute;
+  left: 0;
+  top: 60rpx;
+}
+
+.fhbox_2 {
+  width: 12rpx;
+  height: 12rpx;
+  background: #fd483c;
+  border-radius: 20rpx;
+  position: absolute;
+  left: 10rpx;
+  top: 38rpx;
+}
+
+.fhbox_3 {
+  width: 12rpx;
+  height: 12rpx;
+  background: #4cb5ff;
+  border-radius: 20rpx;
+  position: absolute;
+  left: 10rpx;
+  top: 38rpx;
+}
+
+.fhbox_4 {
+  clear: both;
+  position: relative;
+  padding-top: 14rpx;
+}
+
+.fhbox_4_1 {
+  font-size: 30rpx;
+  color: #333;
+  height: 40rpx;
+  line-height: 40rpx;
+  padding-left: 40rpx;
+  border: 1rpx #dfdfdf solid;
+  width: 510rpx;
+  padding: 8rpx;
+  margin-left: 40rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  margin-bottom: 20rpx;
+}
+
+.fhbox_4_2 {
+  font-size: 26rpx;
+  color: #999;
+  height: 46rpx;
+  line-height: 40rpx;
+  padding-left: 10rpx;
+  border-bottom: 1px #f5f5f5 solid;
+  width: 510rpx;
+  margin-left: 40rpx;
+  padding-top: 10rpx;
+}
+
+.phcolor {
+  color: #999;
+}
+
+.fhbox_5 {
+  font-size: 26rpx;
+  color: #999;
+  position: absolute;
+  right: 10rpx;
+  top: 24rpx;
+  background: url(https://style.org.hc360.com/images/logistics/s-program/ico64.png) no-repeat;
+  width: 44rpx;
+  height: 44rpx;
+  background-size: 44rpx 44rpx;
+}
+
+.fhbox_5_ico {
+  font-size: 26rpx;
+  color: #999;
+  position: absolute;
+  right: 10rpx;
+  top: 24rpx;
+  background: url(https://style.org.hc360.com/images/logistics/s-program/ico65.png) no-repeat;
+  width: 44rpx;
+  height: 44rpx;
+  background-size: 44rpx 44rpx;
+}
+
+.xiala {
+  clear: both;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+.gd_dz {
+  position: absolute;
+  right: 0;
+  top: 77rpx;
+  font-size: 20rpx;
+  color: #999;
+  cursor: pointer;
+}
+
+.dizhi {
+}
+
+.juli {
+  font-size: 22rpx;
+  color: #999;
+  text-align: center;
+  line-height: 70rpx;
+}
+
+.dizhi_1 {
+  font-size: 24rpx;
+  color: #333;
+  position: relative;
+  text-indent: 66rpx;
+  display: flex;
+  justify-content: space-between;
+  line-height: 70rpx;
+  height: 140rpx;
+  align-items: center;
+  padding: 0 20rpx;
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+.dizhi_1::after {
+  content: '';
+  position: absolute;
+  top: 33rpx;
+  left: 0;
+  display: block;
+  background: url(https://style.org.hc360.com/images/logistics/s-program/ico49.png) no-repeat;
+  width: 50rpx;
+  height: 60rpx;
+  background-size: 50rpx 60rpx;
+  float: left;
+}
+
+.fhico {
+  background: url(https://style.org.hc360.com/images/logistics/s-program/ico58.png) no-repeat;
+  width: 40rpx;
+  height: 44rpx;
+  background-size: 40rpx 44rpx;
+  position: absolute;
+  left: 15rpx;
+  top: 80rpx;
+  z-index: 100;
+}
+
+.clearAddressHistory {
+  width: 80%;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  border: 1px #e5e5e5 solid;
+  font-size: 30rpx;
+  color: #333;
+  border-radius: 10rpx;
+  background: url(https://style.org.hc360.com/images/logistics/s-program/ico17.png) no-repeat 150rpx 3rpx;
+  background-size: 54rpx 54rpx;
+  margin-top: 10rpx;
+}
+
+.picker {
+  position: relative;
+  font-size: 26rpx;
+  color: #999;
+  line-height: 46rpx;
+  border-bottom: 1px #f5f5f5 solid;
+  width: 510rpx;
+}
+
+.picker::after {
+  content: '';
+  position: absolute;
+  top: 8rpx;
+  right: 0;
+  display: block;
+  background: url(https://style.org.hc360.com/images/logistics/s-program/ico13.png) no-repeat;
+  width: 24rpx;
+  height: 30rpx;
+  background-size: 24rpx 30rpx;
+  float: left;
+}

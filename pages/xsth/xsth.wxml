@@ -1,0 +1,76 @@
+<!--pages/xsth/xsth.wxml-->
+<view class='pb20'>
+  <view class='p20'>
+    <view class='xsth_1'>
+      <image class='xsth_2' src='https://img007.hc360.cn/k1/M08/6E/BE/t9116d75A120B7B3226Ad00485E9F202d6C.jpg'></image>
+    </view>
+  </view>
+
+  <view class='p20'>
+    <view class='b_r_1'>
+      <view class='xsth_box'>
+        <view class='xsth_4'>
+            <span style='font-weight:bold;'>活动主题：</span>
+            <span style='font-weight:bold;'>燃情7月 盛夏狂欢</span>
+        </view>
+         <view class='xsth_4'>
+            <span style='font-weight:bold;'>活动对象：</span>
+            <span style='font-weight:bold;'>慧聪物流平台下单的用户</span>
+        </view>
+        <view class='xsth_4'>
+            <span style='font-weight:bold;'>活动时间：</span>
+            <span style='font-weight:bold;'>2019年7月1日-7月31日</span>
+        </view>
+       
+        <view class='xsth_4' style='font-weight:bold;'>活动内容：</view>
+         <view class='xsth_4' style='font-weight:bold;'>惊喜一：</view>
+        <view class='xsth_4'>
+          
+          <span>在活动期间，可享受跨越物流产品的纯运费ZD8.5折的优惠。</span>
+        </view>
+         <view class='xsth_4' style='font-weight:bold;'>惊喜二：</view>
+        <view  class='xsth_4'>
+         
+        
+          <span>     所有参与活动的客户，还能享受跨越速运提供的时效保障、昼夜取件、专属客服以及超时退费等四大优质服务，这些与日常寄件服务标准完全相同的福利，让各大企业客户，充分感受到跨越速运提供的多重超值“航空”寄件体验。</span>
+          
+        </view>
+         <view class='xsth_4' style='font-weight:bold;'>惊喜三：</view>
+        <view  class='xsth_4'>
+         
+        
+          <span>     跨越速运客户服务热线“95324”开始试运行啦！“95”=就是我，“3”
+
+=365天，“24”=7*24小时，“95324”即跨越速运365天*7*24小时，不间断为您提供物流服务。</span>
+          
+        </view>
+
+        
+        <!-- 
+        <view class="table">
+            <view class="table-tr xsth_4" >
+                <view class="table-th">100元现金券</view>
+                <view class="table-th">100元京东购物卡</view>
+                <view class="table-th">300元京东购物卡</view>
+            </view>
+            <view class="table-tr xsth_4" >
+                <view class="table-td">新用户首次发货随机抽取50名</view>
+                <view class="table-td">环比12月发货量增长最快前30名</view>
+                <view class="table-td">累计发货量排名前10名</view>
+            </view>
+        </view>
+        
+        <view class='xsth_4'>说明：奖品将于活动结束后10个工作日内发放，且不重复获奖</view>
+        <view class='xsth_4'>（发货量体现为运费；现金券即运费抵扣券，将以短信形式发放到发货人手机上）</view>-->
+        <view class='xsth_4' style='font-weight:bold;' >特别说明：</view>
+        <view class='xsth_4'>1、发货时效不算发货当天，第二天开始计算，三四线城市时效自动加一个工作日；</view>
+        <view class='xsth_4'>2、此优惠不与跨越速运其他优惠同时享受（签约客户以协议价格为准，不参与此活动）；</view>
+        <view class='xsth_4'>3、跨省当天达和跨省次日达两款产品，不享受此次活动优惠，以平台报价为准；</view>
+        <view class='xsth_4'>4、如有疑问，可致电跨越速运客服热线4008098098；</view>
+        <view class='xsth_4'>5、在法律范围内，跨越速运对此活动保留最终解释权。</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='xsth_tj' bindtap='toNavigate'>立即下单</view>

@@ -1,0 +1,6 @@
+<!--components/sidebar/sidebar.wxml-->
+<view bindtap='_showModel' class='sidebar-wrap-{{propCssType}}' style='{{propCssType}}: {{propShowSidebarFlag? "-100%" : "0"}};background:{{propShowSidebarFlag ? "rgba(255, 255, 255, 0)" : "rgba(0, 0, 0, .5)"}};'>
+  <view catchtap='stopPropagation' class='sidebar-content-{{propCssType}}'>
+    <slot/>
+  </view>
+</view>

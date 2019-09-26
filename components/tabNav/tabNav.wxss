@@ -1,0 +1,17 @@
+/* components/tabNav/tabNav.wxss */
+.tab-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.animate-line {
+  position: absolute;
+  height: 4rpx;
+  background: #fd473c;
+  bottom: -1px;
+  transition: all 0.2s ease-in-out;
+  z-index: 99;
+}

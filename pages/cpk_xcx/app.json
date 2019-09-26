@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/personCenter/index",
+    "pages/edit/index",
+    "pages/score_1/index",
+    "pages/score_2/index"   
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "#fff"
+  }
+}

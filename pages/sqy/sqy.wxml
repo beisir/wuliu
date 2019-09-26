@@ -1,0 +1,11 @@
+<!--pages/sqy/sqy.wxml-->
+<view class='sqy_img'></view>
+<view class='sqy_1'>惠物流</view>
+<view class='sqy_2'>惠物流-人人使用的物流发货平台</view>
+
+<view class='sqy_box'>
+       <view class='sqy_3'>该程序将获得以下授权</view>
+       <view class='sqy_3'>获得您的公开信息（头像、昵称等)</view>
+       <button bindtap='goBack' class='sqy_btn1'>返回首页</button>
+       <button class='sqy_btn2' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">立即授权</button>
+</view>

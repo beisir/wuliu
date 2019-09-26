@@ -1,0 +1,39 @@
+<!--index.wxml-->
+<view class='p20'>
+  <view class='b_r'>
+          <view class='dzb_1'>
+                  <text class='text1'>粘贴文本或者上传图片，自动识别地址信息</text>
+                  <icon class='ico_1'></icon>
+                  <view class='num_t'>10/100</view>
+          </view>
+  </view>
+  <view class='b_r'>
+         <view class='b_r_li1'>
+                <view class='b_r_bt'>收件人</view>
+                <text class='b_r_ipt'>必填</text>
+         </view>
+          <view class='b_r_li1'>
+                <view class='b_r_bt'>电话</view>
+                <text class='b_r_ipt'>必填</text>
+                <view class='b_r_xz'>选择联系人</view>
+         </view>
+          <view class='b_r_li1'>
+                <view class='b_r_bt'>省市区</view>
+                <text class='b_r_ipt_1'>黑龙江省 哈尔滨市 南岗区</text>
+         </view>
+          <view class='b_r_li1'>
+                <view class='b_r_bt'>街道</view>
+                <text class='b_r_ipt'>必填</text>
+         </view>
+         <view class='b_r_li1'>
+                <view class='b_r_bt'>门牌号</view>
+         </view>
+  </view>
+
+</view>
+<view class='bc_btn'>
+        保存
+</view>
+
+<view class='qsr_tk_bg'></view>
+<view class='qsr_tk'>请输入收件人姓名</view>

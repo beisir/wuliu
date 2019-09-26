@@ -1,0 +1,100 @@
+<!--index.wxml-->
+<view wx:if="{{bannerRender && flashSalesRender && logisticsListData}}">
+  <view class='topSearch'>
+    <navigator hover-class='none' url='../ss_wnsb/ss_wnsb?title=搜索&functionName=顶部搜索' class='searchCon'>
+      <view>北京 到 上海</view>
+      <icon class='yuyinIco'></icon>
+    </navigator>
+  </view>
+  <!-- 轮播图 -->
+  <view wx:if="{{bannerRender}}" class='scroll'>
+    <swiper style='height:230rpx;' wx:if="{{bannerRender}}" class="swiper" indicator-dots="{{bannerRender.length <=1 ?false : true }}" circular="true" autoplay="true" interval="{{interval}}">
+      <block wx:for="{{bannerRender}}" wx:key="{{index}}">
+        <swiper-item>
+          <view data-type="轮播图" data-item="{{item}}" hover-class='none' class='scrollCon' bindtap='navigateTo'>
+            <image class="scrollImg" mode="aspectFill" src="{{item.path}}" data-index="{{index}}" />
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 菜单导航按钮  -->
+  <view class='navBox'>
+    <block wx:for="{{meauNavList}}" wx:key="index">
+      <view bindtap='routerTo' hover-class="none" wx:if="{{item.path}}" class="navTit" data-item="{{item}}">
+        <icon class='ico{{index+1}}'></icon>
+        <text>{{item.title}}</text>
+      </view>
+      <!-- 物流跟踪  -->
+      <view wx:else bindtap='scavenging' class="navTit">
+        <icon class='ico{{index+1}}'></icon>
+        <text>{{item.title}}</text>
+      </view>
+    </block>
+  </view>
+  <!-- 新用户特权 -->
+  <!-- <view bindtap='navigateTo' data-item='{{newUser}}' class='adImg'>
+    <image src='{{newUser.path}}'></image>
+  </view> -->
+  <!-- 限时特惠 -->
+  <view wx:if="{{flashSalesRender && flashSalesRender.length !== 0}}" class='titBox'>限时特惠
+    <view class='timeCon'>剩余时间：
+      <text>{{days}} 天 {{hours}} ：{{minutes}} ：{{seconds}}</text>
+    </view>
+  </view>
+
+  <view style='width:100%; overflow-x:auto;' class='box1Con'>
+    <block wx:for="{{flashSalesRender}}" wx:key="item.id">
+      <view data-type="限时特惠" data-item='{{item}}' bindtap='navigateTo' class='box1ConImg'>
+        <view class='box1Img'>
+          <image wx:if="{{item.path}}" src='{{ item.path }}'></image>
+          <image wx:else src='https://style.org.hc360.com/images/microMall/program/proGimg.png'></image>
+        </view>
+        <view class='box1ConBot'>{{ item.activityTitlePre }}
+          <text>{{ item.discount }}</text>{{ item.activityTitleSuf }}</view>
+      </view>
+    </block>
+  </view>
+
+  <!-- 为你优选 -->
+  <view wx:if="{{goodsChooseRender.length !== 0}}" class='titBox'>为你优选</view>
+  <view class='box2Con'>
+    <view data-type="为你优选" data-item="{{item}}" bindtap='toLogisticDetail' wx:for="{{goodsChooseRender}}" wx:key="index" class='lineCon'>
+      <view class='lineName'>{{item.city}} — {{item.eCity}}</view>
+      <view class='lineConBot'>{{item.cb}}
+        <text wx:if="{{item.heavySale}}">{{item.heavySale}})</text>
+      </view>
+    </view>
+  </view>
+  <!-- 附近物流  -->
+  <view wx:if="{{logisticsListData && logisticsListData.length !== 0}}" class='titBox'>附近物流</view>
+  <view wx:if="{{logisticsListData && logisticsListData.length !== 0}}" class='box3Tit'>
+    <block wx:for="{{ logisticsNavList }}" wx:key='{{index}}'>
+      <view wx:if="{{ item.title !== '筛选'}}" data-index="{{index}}" class='{{ curindex == index ? "botcur": "box3TitCon"}}' bindtap='tabsort'>{{item.title}}</view>
+      <navigator hover-class='none' wx:else url='/pages/screening/screening?title=筛选条件' data-index="{{index}}" class='{{ curindex == index ? "botcur": "box3TitCon"}}'>{{item.title}}</navigator>
+    </block>
+  </view>
+  <view class='tabBotCon' wx:if="{{logisticsListData.lenght!==0}}">
+    <swiper style="height:{{logisticsListData[curindex].length * 258}}rpx;" current="{{curindex}}" bindchange="crrentChange">
+      <swiper-item wx:if="{{item.title !== '筛选'}}" wx:for="{{logisticsNavList}}" wx:key="index">
+        <block wx:for="{{logisticsListData[curindex]}}" wx:key='index'>
+          <view class='tabBotListG' data-opts="{{item}}" bindtap='toLogisticDetail'>
+            <view class='logoImgG'>
+              <image wx:if="{{item.logisticLogoUrl}}" src='{{ item.logisticLogoUrl }}'></image>
+              <image wx:else src='https://style.org.hc360.com/images/microMall/program/proGimg.png'></image>
+            </view>
+            <view class='logoImgRigG'>
+              <view style='display:flex;flex-direction:column;justify-content:space-between;margin: 0 20rpx;width:90%;'>
+                <view class='comNameG'>{{item.logisticName}}/{{item.name}}</view>
+                <text class='comPromptG'>{{ item.address }}</text>
+                <view style='align-self:start;' wx:if="{{item.discountTile}}" class='discountCon'>{{item.discountTile}}</view>
+              </view>
+              <!-- <view style='font-size:22rpx;color:red;display: inline-block;margin: 0 0 0 10rpx;float:left;' wx:if="{{item.logisticDiscount}}" class=''>{{item.logisticDiscount || ''}}折</view> -->
+            </view>
+            <view class='kmNumG'>{{ item.distanceStr }}</view>
+          </view>
+        </block>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

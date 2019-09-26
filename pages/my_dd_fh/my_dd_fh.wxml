@@ -1,0 +1,12 @@
+<!--pages/my_dd_fh/my_dd_fh.wxml-->
+ <view class='p20' wx:if="{{modellist.length !== 0}}">
+  <block wx:for="{{ modellist }}" wx:key="{{item.title}}">
+    <view data-item="{{item}}"  bindtap='navigateTo' class='b_r_2'>
+      <view style='width:calc(100% - 200rpx);overflow:hidden;white-space:nowrap;text-overflow:ellipsis;' class='fh_t'>{{ item.goodsName }} ({{ item.goodsNumber }})</view>
+      <view class='shr_cs' data-goodsId='{{ item.id }}' catchtap='showmo'>删除</view>
+    </view>
+  </block>
+</view> 
+<view wx:if='{{showFlag}}' style='height:100%; display:flex; justify-content:center; align-items:center;' >
+  <view style='text-align:center; font-size:24rpx; color:#666;'>暂时您还没有货物记录哦~</view>
+</view>

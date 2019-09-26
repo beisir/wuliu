@@ -1,0 +1,5 @@
+/* pages/wl_index/dzb_shr.wxss */
+.dzb_tab{
+   width:100%;
+   font-size:34rpx;
+}

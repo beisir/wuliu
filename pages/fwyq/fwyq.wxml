@@ -1,0 +1,32 @@
+<!--pages/fwyq/fwyq.wxml-->
+<view class='p20'>
+  <view class='b_r_1'>
+    <block wx:if="{{chooseServer}}" wx:for='{{ chooseServer.serverInfo }}' wx:key='{{ index }}'>
+      <view class='fwyq_1' wx:if="{{index !== '15' && index !== '12' && index !== '14'}}">
+        <view>{{ serverDictionary[index]}}
+          <view style='font-size: 20rpx;color:red;display:inline-block;'>{{item.isRequired === '1' ? '*必选': ''}}</view>
+        </view>
+        <!-- 货物保价/保险 -->
+        <view style='display: flex;width:50%;' wx:if="{{index === '9' || index === '11'}}">
+          <input value='{{item.inputPrice}}' data-key="{{index}}" disabled="{{!item.flag}}" style="display: inline-block;background-color:#eee;text-align:center;font-size:24rpx;" type='digit' bindblur="inputBlur" placeholder='{{item.flag ? "请输入金额" : "开启后输入"}}'
+          />
+          <view style='color:red;font-size: 26rpx;width:60%;'>{{item.resultPrice && item.flag ? '('+item.resultPrice+'元)' : ''}}</view>
+        </view>
+        <!-- 其他公用滑块选项 -->
+        <view wx:else style="display: inline-block;color: red;font-size: 26rpx;">{{item.flag ? item.displayValue || '' : ''}}</view>
+        <switch class='sw_btn1' checked='{{item.flag}}' data-index='{{ index }}' bindchange="switchChange" />
+      </view>
+      <!-- 签收回单 -->
+      <picker wx:elif="{{index === '14'}}" class='branch' bindchange="chooseReceipts" value="{{receiptstType}}" range="{{receiptsArray}}">
+      <view class='branch_1'>签收回单</view>
+      <text class='branch_2_1'>{{receiptsArray[receiptstType]}}</text>
+    </picker>
+    </block>
+    <!-- 运费支付方式 -->
+    <!-- <picker class='branch' bindchange="bindPickerChange" value="{{paymentType}}" range="{{paymentArray}}">
+      <view class='branch_1'>运费支付方式</view>
+      <text class='branch_2_1'>{{paymentArray[paymentType]}}{{serverInfo['12'].displayValue || ''}} </text>
+    </picker> -->
+  </view>
+  <view class='fwyq_tj' bindtap='saveInfo'>确认</view>
+</view>

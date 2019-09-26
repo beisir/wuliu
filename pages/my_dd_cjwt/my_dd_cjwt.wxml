@@ -1,0 +1,27 @@
+<!--pages/my_dd_cjwt/my_dd_cjwt.wxml-->
+<view class='cjwt_img'>
+  <image class='cjwt_img_1' src='https://style.org.hc360.com/images/logistics/s-program/img01.jpg'></image>
+</view>
+
+<view class='shr_1'>
+  <tab-nav childrenLength="{{renderData.length}}" currentIndex="{{currentIndex}}">
+    <tab-item itemHeight="92" style="width:100%;font-size:34rpx;" childrenLength="{{renderData.length}}" wx:for="{{renderData}}" wx:key="{{index}}" index="{{index}}" currentIndex="{{currentIndex}}" bindchangeIndex="changeCurrentIndex">
+      {{item.tabTitle}}
+    </tab-item>
+  </tab-nav>
+</view>
+
+<swiper style="height:{{renderData[currentIndex].render.length * 264 + 180}}rpx;" current="{{currentIndex}}" bindchange="crrentChange" class='p20'>
+  <swiper-item wx:for="{{renderData}}" wx:for-item="itemName" wx:for-index="idx" wx:key='idx'>
+    <block wx:for="{{itemName.render}}" wx:key="index">
+      <view class='cjwt_box1'>
+        <view class="{{itemName.styleIndex === index ? 'cjwt_bt_1': 'cjwt_bt'}}" data-index="{{index}}" bindtap="onlineClick">{{item.title}}</view>
+        <view class="{{itemName.styleIndex === index ? 'cjwt_text': 'cjwt_text_1'}}">
+          <block wx:for="{{item.textList}}" wx:for-item="childItem" wx:key="{{childItem.textItem}}">
+            <view class='cjwt_text1'>{{childItem.textItem}}</view>
+          </block>
+        </view>
+      </view>
+    </block>
+  </swiper-item>
+</swiper>

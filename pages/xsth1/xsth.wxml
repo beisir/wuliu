@@ -1,0 +1,67 @@
+<!--pages/xsth/xsth.wxml-->
+<view class='pb20'>
+  <view class='p20'>
+    <view class='xsth_1'>
+      <image class='xsth_2' src='https://img007.hc360.cn/k1/M03/6F/19/U2gd6860B821952BB59A839915FBFC452C1.jpg'></image>
+    </view>
+  </view>
+
+  <view class='p20'>
+    <view class='b_r_1'>
+      <view class='xsth_box'>
+        <view class='xsth_4'>
+            <span style='font-weight:bold;'>活动主题：</span>
+            <span style='font-weight:bold;'>冰点价格  清凉一夏</span>
+        </view>
+        <view class='xsth_4'>
+            <span style='font-weight:bold;'>活动时间：</span>
+            <span style='font-weight:bold;'>2019年7月1日-7月31日</span>
+        </view>
+         <view class='xsth_4'>
+            <span style='font-weight:bold;'>活动对象：</span>
+            <span style='font-weight:bold;'>通过慧聪物流平台下单的客户</span>
+        </view>
+        
+       
+        <view class='xsth_4' style='font-weight:bold;'>活动内容：</view>
+        
+        <view class='xsth_4'>
+          
+          <span>全网纯运费7折</span>
+          
+        </view>
+        <view class='xsth_4'>
+          
+          <span>距网点30公里内免费接货</span>
+          
+        </view>
+       
+        
+        
+        <!-- 
+        <view class="table">
+            <view class="table-tr xsth_4" >
+                <view class="table-th">100元现金券</view>
+                <view class="table-th">100元京东购物卡</view>
+                <view class="table-th">300元京东购物卡</view>
+            </view>
+            <view class="table-tr xsth_4" >
+                <view class="table-td">新用户首次发货随机抽取50名</view>
+                <view class="table-td">环比12月发货量增长最快前30名</view>
+                <view class="table-td">累计发货量排名前10名</view>
+            </view>
+        </view>
+        
+        <view class='xsth_4'>说明：奖品将于活动结束后10个工作日内发放，且不重复获奖</view>
+        <view class='xsth_4'>（发货量体现为运费；现金券即运费抵扣券，将以短信形式发放到发货人手机上）</view>-->
+        <view class='xsth_4' style='font-weight:bold;' >特别说明：</view>
+        <view class='xsth_4'>此优惠不与天地华宇其他优惠同时享受（签约客户以协议价格为准）；</view>
+        <view class='xsth_4'>2.通过慧聪物流平台发货，如遇3000元以内索赔，可24小时内快速赔付；</view>
+        <view class='xsth_4'>3.如有疑问，可致电天地华宇客服热线4008086666或咨询当地门店;</view>
+        <view class='xsth_4'>4.在法律范围内，天地华宇对此活动保留ZZ解释权。</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='xsth_tj' bindtap='toNavigate'>立即下单</view>

@@ -1,0 +1,9 @@
+/* pages/ ddxq/ ddxq.wxss */
+
+.ksxd_box4_nom {
+  font-size: 22rpx;
+  color: #ff0505;
+  border: 1rpx solid #ff0505;
+  border-radius: 20rpx;
+  padding: 2rpx 10rpx;
+}

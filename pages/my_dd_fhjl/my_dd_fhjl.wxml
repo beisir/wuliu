@@ -1,0 +1,41 @@
+<!--pages/my_dd_fhjl/my_dd_fhjl.wxml-->
+<view class='topSearch'>
+  <view class='searchCon'>
+    <input value='{{keywords}}' bindconfirm='inputSearch' placeholder-class="phcolor" type='text' placeholder='请输入关键字搜索' />
+    <!-- <icon class='yuyinIco'></icon> -->
+  </view>
+</view>
+
+<view class='filtrate'>
+  <block wx:for="{{fillateList}}" wx:key="{{index}}">
+    <picker bindtap='pickerOpen' bindcancel="pickenCancel" data-index="{{index}}" style='float: none;' class='{{item.styleStatus ? "fhxl_1_2" : "fhxl_1_1"}}' bindchange="filtrateChange" range-key="text" value="{{item.index}}" range="{{item.content}}">
+      <view>
+        {{item.content[item.index].text}}{{index === 2 ? '('+count+')' : ''}}
+      </view>
+    </picker>
+  </block>
+</view>
+
+<view wx:if="{{modellist.length !== 0}}" class='sflx_3'>
+  <block wx:for='{{ modellist }}' wx:key='{{index}}'>
+    <view data-orderid="{{item.orderId}}" bindtap='orderDetail' class='fhjl_box1'>
+      <view class='fhjl_t1'>
+        <view class='fh_dd_1'>运单号：{{item.logisticOrderCode || '暂无'}}</view>
+        <view class='fh_wsl_1'>{{fillateList[2].content[item.state].text}}</view>
+        <view class='fh_wsl_2'>{{item.receiveAddress || ''}} {{item.receiveName || ''}} {{item.receiveMobile || ''}}</view>
+      </view>
+      <view class='fhjl_t2'>
+        <view class='fhjl_t2_1'>
+          <view class='fhjl_t2_3'>创建时间：{{ item.createTime }}</view>
+          <view class='fhjl_t2_4'>订单编号：{{ item.orderCode }}</view>
+        </view>
+        <view catchtap='orderAgain' data-orderid="{{item.orderId}}" class='fhjl_t2_2'>
+          再来一单
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+<view hidden='{{showFlag}}' style='text-align:center; color:#999;line-height:500rpx'>
+  没有相关数据
+</view>

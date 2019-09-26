@@ -1,0 +1,29 @@
+<!--pages/wdxx/wdxx.wxml-->
+<view class='p20'>
+  <view class='b_r_1'>
+       <view class='wdxx_1'>北京丰台科技台科技园86号</view>
+       <view class='wdxx_1 wdxx_2'>北京昌平台科技科技园30号</view>
+       <view class='wdxx_1'>北京丰台科技园86号台科技台科技台科技</view>
+       <view class='wdxx_1'>北京昌平科技台科技园30号</view>
+       <view class='wdxx_1'>北京丰台科技园86号</view>
+       <view class='wdxx_1'>北京昌平科技台科技园30号</view>
+       <view class='wdxx_1'>北京丰台科技台科技园86号</view>
+       <view class='wdxx_1'>北京昌平科技园30号</view>
+       <view class='wdxx_1'>北京丰台科技台科技园86号</view>
+       <view class='wdxx_1'>北京昌平台科技科技园30号</view>
+       <view class='wdxx_1'>北京丰台科技园86号台科技台科技台科技</view>
+       <view class='wdxx_1'>北京昌平科技台科技园30号</view>
+       <view class='wdxx_1'>北京丰台科技园86号</view>
+       <view class='wdxx_1'>北京昌平科技台科技园30号</view>
+       <view class='wdxx_1'>北京丰台科技台科技园86号</view>
+       <view class='wdxx_1'>北京昌平科技园30号</view>
+       <view class='wdxx_1'>北京丰台科技台科技园86号</view>
+       <view class='wdxx_1'>北京昌平台科技科技园30号</view>
+       <view class='wdxx_1'>北京丰台科技园86号台科技台科技台科技</view>
+       <view class='wdxx_1'>北京昌平科技台科技园30号</view>
+       <view class='wdxx_1'>北京丰台科技园86号</view>
+       <view class='wdxx_1'>北京昌平科技台科技园30号</view>
+       <view class='wdxx_1'>北京丰台科技台科技园86号</view>
+       <view class='wdxx_1'>北京昌平科技园30号</view>
+  </view>
+</view>

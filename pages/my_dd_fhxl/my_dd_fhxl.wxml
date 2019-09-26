@@ -1,0 +1,24 @@
+<!--pages/my_dd_fhxl/my_dd_fhxl.wxml-->
+<view class='topSearch'>
+  <view class='searchCon'><input placeholder-class="phcolor" type='text' placeholder='北京  上海  线路' /><icon class='yuyinIco'></icon></view>
+</view>
+
+<view class='fhxl_1'>
+ <view class='fhxl_1_1'>近一个月的</view>
+ <view class='fhxl_1_2'>全部</view>
+
+         <view class='sflx_2'>
+          <view class='li_1'>
+            <view class='li_1_left_1'>近三个月的</view>
+          </view>
+            <view class='li_1'>
+              <view class='li_1_left'>近六个月的</view>
+          </view>
+            <view class='li_1'>
+              <view class='li_1_left'>近三个月的</view>
+          </view>
+           
+       </view>
+</view>
+
+

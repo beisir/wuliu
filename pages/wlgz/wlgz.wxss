@@ -1,0 +1,4 @@
+/* pages/wlgz/wlgz.wxss */
+.empty{color:#666;font-size:28rpx;text-align:center}
+.wlgz_yy{ z-index: 999;}
+.wlgz_sm{z-index: 999;}

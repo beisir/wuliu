@@ -1,0 +1,4 @@
+<!--components/tabItem/tabItem.wxml-->
+<view class="{{index === currentIndex && 'active'}}" bindtap="changeTabNav" style="text-align:center; height:{{itemHeight + 'rpx'}}">
+<slot></slot>
+</view>

@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class='p20'>
+  <view class='sflx_1' wx:for="{{identityList}}" wx:key="{{item.name}}">
+    <view class='li_1'>
+      <view class='{{ index == curindex ? "li_1_left_1" : "li_1_left"}}' data-index='{{index}}' data-typeCode='{{ item.typeCode }}' bindtap='onchange'>{{ item.name }}</view>
+    </view>
+  </view>
+</view>

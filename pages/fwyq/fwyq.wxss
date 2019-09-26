@@ -1,0 +1,9 @@
+/* pages/fwyq/fwyq.wxss */
+
+.branch{ clear: both;height: 70rpx;line-height: 70rpx; padding: 5rpx 0;}
+.branch_1{font-size: 34rpx; color: #333; float: left; padding-left: 25rpx;}
+.branch_2{font-size: 24rpx; color: #999; float: right;padding-right: 25rpx;height: 70rpx; line-height: 70rpx;}
+.branch_3{ float: left; width: 100rpx; text-align: center;font-size: 24rpx; color: #666; height: 70rpx; line-height: 70rpx;}
+.branch_4{font-size: 34rpx; color: #333; float: right; padding-right: 20rpx;}
+.branch_2_1{font-size: 24rpx; color: #999; float: right;padding-right: 40rpx; position: relative;}
+.branch_2_1::after{ content:''; position: absolute; top:20rpx;right:10rpx; display: block; background:url(https://style.org.hc360.com/images/logistics/s-program/ico13.png) no-repeat; width: 24rpx; height: 34rpx; background-size: 24rpx 30rpx; float:left;}

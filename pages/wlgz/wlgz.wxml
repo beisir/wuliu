@@ -1,0 +1,39 @@
+<!--pages/wlgz/wlgz.wxml-->
+<!-- 搜索 -->
+<view class='topSearch_3'>
+  <view class='searchCon_3'>
+    <input bindconfirm="searchSubmit" confirm-type="查询" maxlength="20" class="phcolor_3" type='text' value='{{scanCode}}' placeholder='请输入查询编码' />
+    <!-- 录音 -->
+    <view bindtouchstart='recorderStart' bindtouchend='recorderEnd' class='wlgz_yy'></view>
+    <!-- 扫码 -->
+    <view bindtap='scavenging' class='wlgz_sm'></view>
+  </view>
+</view>
+<!-- 物流信息 -->
+<view class='p20'>
+  <view class='b_r_1'>
+    <view wx:if="{{list.content.length !== 0}}" class='ddxq_box5'>
+      <view class='ddxq_box5_left'>
+        <block wx:for='{{ list.content }}' wx:key='{{ item.dateString }}'>
+          <view class='ddxq_box5_1'>
+            <!-- <view class='ddxq_sj1'>{{ item.dateString }}</view> -->
+            <view class='ddxq_sj2'>{{ item.ftime }}</view>
+            <view wx:if="{{ list.state && index == 0 }}" class='ddxq_box5_ico1'></view>
+
+            <view wx:if="{{ !list.state || index > 0 }}" class='ddxq_box5_ico2'></view>
+          </view>
+        </block>
+      </view>
+      <view class='ddxq_box5_right'>
+        <block wx:for="{{ list.content }}" wx:key='{{ item.context }}'>
+          <view class='ddxq_right_box1'>
+            <view class='{{ list.state && index == 0? "right_box1_1" : "right_box1_2"}}'>{{ item.context }}</view>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class='ddxq_box5 empty' wx:else>
+     {{scanCode !== ''? '没有搜到该编码的物流信息' : '请输入您在慧聪网的运单号或物流编号'}}
+    </view>
+  </view>
+</view>

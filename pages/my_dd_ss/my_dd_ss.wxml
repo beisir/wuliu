@@ -1,0 +1,5 @@
+<!--pages/my_dd_ss/my_dd_ss.wxml-->
+<view class='my_dd_1'>
+  <view class='my_dd_ss'>15016853246</view>
+  <view class='my_dd_qx'>取消</view>
+</view>

@@ -1,0 +1,65 @@
+<!--pages/gsyf/gsyf.wxml-->
+<view class='p20'>
+  <view class='b_r_1'>
+    <view class='gsyf_1'>
+      <picker data-type="sendArray" mode="region" bindchange="bindPickerChange" value="{{sendArray}}">
+        <view class="picker">
+          寄：{{sendArray[0]}}，{{sendArray[1]}}，{{sendArray[2]}}
+        </view>
+      </picker>
+    </view>
+    <view class='gsyf_2'>
+      <picker data-type="receiveArray" mode="region" bindchange="bindPickerChange" value="{{receiveArray}}">
+        <view class="picker">
+          收：{{receiveArray[0]}}，{{receiveArray[1]}}，{{receiveArray[2]}}
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class='b_r_1'>
+    <view class='gsyf_3'>
+      <view class='gsyf_3_1'>货物信息</view>
+    </view>
+    <view style='justify-content:start;' class='gsyf_4'>
+      <view class='gsyf_4_1'>
+        <text class='xicn'>*</text>物品名称</view>
+      <view style='width:404rpx;text-align:center;display:flex;justify-content:center;'>
+        <input maxlength="20" bindinput='input' data-type="goodsName" bindblur='inputBlur' type="text" value='{{goodsInfo.goodsName}}' class='gsyf_4_2s' type='text' placeholder='请输入物品名称' />
+      </view>
+    </view>
+    <view class='gsyf_4'>
+      <view class='gsyf_4_1'>
+        <text class='xicn'>*</text>总重量</view>
+      <add-subtrack-wrap bindcomChangeData="comChangeData" prop-key="goodsInfo.goodsWeight" prop-initial="{{goodsInfo.goodsWeight}}">
+        <input maxlength="8" class='gsyf_4_2' data-type="goodsWeight" bindinput='input' bindblur='inputBlur' value='{{goodsInfo.goodsWeight}}' type='text' placeholder='请输入物品重量' />
+      </add-subtrack-wrap>
+      <view class='gsyf_4_4'>公斤</view>
+    </view>
+    <view class='gsyf_4'>
+      <view class='gsyf_4_1'>
+        <text class='xicn'>*</text>总体积</view>
+      <add-subtrack-wrap bindcomChangeData="comChangeData" prop-key="goodsInfo.goodsVolume" prop-initial="{{goodsInfo.goodsVolume}}">
+        <input maxlength="8" class='gsyf_4_2' data-type="goodsVolume" bindinput='input' bindblur='inputBlur' value='{{goodsInfo.goodsVolume}}' type='text' placeholder='请输入货物体积' />
+      </add-subtrack-wrap>
+      <view class='gsyf_4_4'>立方</view>
+    </view>
+    <view class='gsyf_4'>
+      <view class='gsyf_4_1'>
+        <text class='xicn'>*</text>总件数</view>
+      <add-subtrack-wrap bindcomChangeData="comChangeData" prop-key="goodsInfo.goodsNumber" prop-initial="{{goodsInfo.goodsNumber}}">
+        <input maxlength="9" data-type="goodsNumber" bindinput='input' bindblur='inputBlur' value='{{goodsInfo.goodsNumber}}' class='gsyf_4_2' type='text' placeholder='请输入货物数量' />
+      </add-subtrack-wrap>
+      <view class='gsyf_4_4'>件</view>
+    </view>
+    <!-- 实际货物金额 -->
+    <view class='gsyf_4'>
+      <view class='gsyf_4_1'>
+        <text class='xicn'>*</text>货物金额</view>
+      <view style='width:404rpx;text-align:center;display:flex;justify-content:center;'>
+        <input maxlength="12" data-type="goodsAmount" bindinput='input' bindblur='inputBlur' value='{{goodsInfo.goodsAmount}}' class='gsyf_4_2' type='text' placeholder='请输入货物价格' />
+      </view>
+      <view class='gsyf_4_4'> 元</view>
+    </view>
+  </view>
+  <view class='gsyf_btn' bindtap='submit'>确认</view>
+</view>

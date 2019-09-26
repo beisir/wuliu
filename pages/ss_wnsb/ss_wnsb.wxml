@@ -1,0 +1,29 @@
+<!--pages/ss_wnsb/ss_wnsb.wxml-->
+<view class='voiceWrap'>
+  <view style='height:100%;'>
+    <view class='topSearch_2'>
+      <view class='searchCon_2'>
+        <input auto-focus bindblur='inputBlur' bindfocus="inputFocus" bindinput="inputRegex" bindconfirm="searchSubmit" confirm-type="search" maxlength="30" class="phcolor_2" type='text' value='{{searchConten}}' placeholder='北京 到 上海 线路' />
+      </view>
+      <!-- <view class='ss_qx'>取消</view> -->
+    </view>
+    <view style='font-size:22rpx;color:red;padding: 10rpx 30rpx;'>*提示：为了能够给您匹配精准线路，支持您输入省、市或者省、市、区的线路搜索</view>
+    <text class='lishi' wx:if="{{(!voiceInputShow || !recorderInputShow) && searchHistory.length !== 0}}">搜索历史</text>
+    <view wx:if="{{(!voiceInputShow || !recorderInputShow) && searchHistory.length !== 0}}" style='padding:20rpx;height:calc(100% - 320rpx);'>
+      <view class='historyWrap'>
+          <view class='seaWrap'>
+            <view class='seaWord' data-item="{{item}}" bindtap='clickHistory' wx:for="{{searchHistory}}" wx:key="{{index}}">{{item}}</view>
+          </view>
+        <view bindtap='clearHistory' class='qk_none'>清空历史搜索</view>
+      </view>
+    </view>
+    <view wx:if="{{searchHistory.length === 0}}" class='p20'>
+      <view class='ss_wnsb_1'>语音识别</view>
+      <view class='ss_wnsb_2'>你可以这样说</view>
+      <view class='ss_wnsb_3'>北京到上海的线路</view>
+      <view class='ss_wnsb_3'>北京到广州的线路</view>
+    </view>
+  </view>
+
+  <view style='bottom: {{height}}rpx' bindtouchstart='recorderStart' bindtouchend='recorderEnd' wx:if="{{voiceInputShow || recorderInputShow}}" class='voiceInput'>按住 说出你要搜索的路线</view>
+</view>

@@ -1,0 +1,7 @@
+<!--components/tabNav/tabNav.wxml-->
+<view class='tab-wrap' style="width:100%">
+  <view class='tab-content'>
+    <slot></slot>
+    <view class="animate-line" style="width:{{100/childrenLength}}%; left:{{currentIndex*100/childrenLength}}%"></view>
+  </view>
+</view>

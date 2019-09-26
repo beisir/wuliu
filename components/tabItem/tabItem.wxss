@@ -1,0 +1,5 @@
+/* components/tabItem/tabItem.wxss */
+.active {
+  color: #fd473c;
+  transform: scale(1.1, 1.1);
+}

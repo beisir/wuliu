@@ -1,0 +1,37 @@
+<!--pages/manage/manage.wxml-->
+<!--index.wxml-->
+<view class="wl_box1">
+  <view wx:if="{{userInfo.status}}" class='top_box1'>
+    <view class='top_left'>
+      <view class='left_box1'>
+        <view class='left_box1Img'>
+          <image src='{{userInfo.iconUrl}}'></image>
+        </view>
+      </view>
+      <view class='left_box2'>
+        <view class='mz_text'>{{userInfo.niceName}}</view>
+        <view class='mz_text1'>{{userInfo.identityName}}</view>
+      </view>
+    </view>
+    <view bindtap='navigateToIdentity' wx:if="{{userInfo.status}}" class='top_right'></view>
+  </view>
+  <navigator wx:if="{{!userInfo.status}}" class='top_dj' url="../sqy/sqy">授权登录</navigator>
+</view>
+<view class='p20'>
+  <view class='main_box1'>
+    <view data-item="{{item}}" bindtap='toNavigate' class='li_01' wx:for="{{tabList}}" wx:key="{{index}}">
+      <view class='{{item.icon}}'></view>
+      <view class='li_h'>{{item.title}}</view>
+    </view>
+  </view>
+  <view class='main_box1'>
+    <navigator class='li_01' url='/pages/my_dd_yhj/my_dd_yhj?title=优惠券'>
+      <view class='ico_05'></view>
+      <view class='li_h'>优惠券</view>
+    </navigator>
+    <navigator class='li_01' url='/pages/my_dd_cjwt/my_dd_cjwt?title=常见问题'>
+      <view class='ico_06'></view>
+      <view class='li_h'>常见问题</view>
+    </navigator>
+  </view>
+</view>

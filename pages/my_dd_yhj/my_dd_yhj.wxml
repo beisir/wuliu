@@ -1,0 +1,33 @@
+<!--pages/my_dd_yhj/my_dd_yhj.wxml-->
+<view class='yhj_nav' style='position:fixed;top:0;z-index:100;left:0;right:0;'>
+  <tab-nav childrenLength="{{reselist.length}}" currentIndex="{{currentIndex}}">
+    <tab-item class="yhj_nav1" itemHeight="80" style="" childrenLength="{{reselist.length}}" wx:for="{{reselist}}" wx:key="{{index}}" index="{{index}}" currentIndex="{{currentIndex}}" bindchangeIndex="changeCurrentIndex">
+      {{item.title}}
+    </tab-item>
+  </tab-nav>
+</view>
+
+<swiper style="height:{{currentIndex === 0 ? reselist[currentIndex].renderData.length * 220 : reselist[currentIndex].renderData.length * 220}}rpx;min-height:calc(100% - 125rpx);padding-top:100rpx;" current="{{currentIndex}}" bindchange="crrentChange" class='p20'>
+  <swiper-item wx:for="{{reselist}}" wx:key='index'>
+    <block wx:if="{{reselist[currentIndex].renderData !== 0}}">
+      <view wx:for="{{reselist[currentIndex].renderData}}" wx:key="{{index}}" class='yhj_box'>
+        <view class='{{ currentIndex == 2 ? "yhj_left_1" : "yhj_left"}}'>
+          <view class='zk_num1'>{{item.discount || ''}}折优惠券</view>
+        </view>
+        <view class='yhj_right'>
+          <view class='yhj_right1'>
+            <view class='yhj_right1_1'>已用：{{item.useNumber || 0}}次</view>
+            <view class='yhj_right1_1'>未用：{{item.noUsedNumber || 0}}次</view>
+          </view>
+          <view class='yhj_right2'>{{item.beginTime}}-{{item.endTime}}</view>
+          <view class='yhj_right3'>
+            <view class='yhj_right3_1'>限{{item.logisticName || ''}}物流使用</view>
+            <navigator wx:if="{{currentIndex === 0}}" class='yhj_right3_2' url='../ksxd/ksxd?title=下单'>{{reselist[currentIndex].btn}}</navigator>
+            <view style='color: #aaa;border: 1px solid #aaa;' wx:else class='yhj_right3_2'>{{reselist[currentIndex].btn}}</view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <view style='text-align:center;padding:40rpx;font-size:32rpx;color:#999;' wx:else>没有{{reselist[currentIndex].title}}优惠券</view>
+  </swiper-item>
+</swiper>

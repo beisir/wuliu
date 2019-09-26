@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "add-subtrack-wrap": "../../components/addSubtractWrap/addSubtractWrap",
+    "sidebar": "../../components/sidebar/sidebar"
+  }
+}

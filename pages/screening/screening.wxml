@@ -1,0 +1,29 @@
+<!--pages/screening/screening.wxml-->
+<view class='screeningBox'>
+  <view class='screeningTop'>
+    <picker class='branch' data-type="l" bindchange="bindPickerChange" range-key="name" value="{{lIndex}}" range="{{allLogistics}}">
+      <view class="branch_1">
+        选择物流品牌: 
+      </view>
+      <view class='branch_2_1'>{{allLogistics[lIndex].name}}</view>
+    </picker>
+  </view>
+  <view class='b_r_1'>
+    <view class='fwyq_1' wx:for="{{allServer}}" wx:key="{{index}}">
+      {{item.name}}:
+      <switch data-index="{{index}}" checked="{{item.status}}" bindchange="switch1Change" />
+    </view>
+  </view>
+  <view class='screeningBot'>
+    <view class='sBotlist'>
+      <text>距离范围</text>
+      <input data-type="distanceStart" bindinput='bindInput' bindblur='inputBlur' type='text'></input>
+      <text>至</text>
+      <input data-type="distanceEnd" bindinput='bindInput' bindblur='inputBlur' type='text'></input>
+      <text>km</text>
+    </view>
+  </view>
+  <view style='width: 100%;' class='btnBox'>
+  <button style='width: 100%;' bindtap='submite' type='button' class='redBtn'>确认</button>
+</view>
+</view>

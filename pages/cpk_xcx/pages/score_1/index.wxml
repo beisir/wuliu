@@ -1,0 +1,38 @@
+<!--pages/score_1/index.wxml-->
+<view class='scoreBox'>
+  <view class='together'>
+    <view class='scoreTil'>综合评分</view>
+    <view class='scoreNum'>8.9分</view>
+  </view>
+
+  <view class='desCon'>
+    <view class='desTil'>描述相符</view>
+    <view class='desNum'>
+      <text class='d_1'>9.0分</text>
+      <text class='d_2'>高于同行</text>
+      <text class='d_3'>42.2%</text>
+    </view>
+  </view>
+
+  <view class='desCon'>
+    <view class='desTil'>响应时间</view>
+    <view class='desNum'>
+      <text class='d_1'>9.0分</text>
+      <text class='d_2'>高于同行</text>
+      <text class='d_3'>42.2%</text>
+    </view>
+  </view>
+
+  <view class='desCon'>
+    <view class='desTil'>发货速度</view>
+    <view class='desNum'>
+      <text class='d_1'>9.0分</text>
+      <text class='d_2'>高于同行</text>
+      <text class='d_3'>42.2%</text>
+    </view>
+  </view>
+</view>
+
+<view class='w_bot'>
+  <icon class='b_icon'></icon>写评价
+</view>

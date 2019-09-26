@@ -1,0 +1,2 @@
+<!--pages/wjsmy/wjsmy.wxml-->
+<web-view src="{{view_path}}"></web-view>

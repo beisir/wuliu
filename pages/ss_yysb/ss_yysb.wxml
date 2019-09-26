@@ -1,0 +1,12 @@
+<!--pages/ss_yysb/ss_yysb.wxml-->
+<view class='topSearch_2'>
+  <view class='searchCon_2'>
+    <input class="phcolor_2" type='text' placeholder='北京  上海  线路' /> 
+  </view>
+   <view class='ss_qx'>取消</view>
+</view>
+
+<view class='yysb_1'>
+  <view class='yysb_2'>语音识别中...</view>
+  <view class='yysb_3'>10s</view>
+</view>

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "tab-nav": "../../components/tabNav/tabNav",
+    "tab-item": "../../components/tabItem/tabItem"
+  },
+  
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50
+}

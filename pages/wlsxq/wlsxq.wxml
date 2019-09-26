@@ -1,0 +1,115 @@
+<!--pages/wlsxq/wlsxq.wxml-->
+<view class='wlsxq_1'>
+    <view class='wlsxq_2'>德邦物流</view>
+    <view class='wlsxq_3'>
+         <view class='wlsxq_3_1'>服务类型：平台入驻</view>
+         <view class='wlsxq_3_1'>服务热线： 95353</view>
+    </view>
+     <view class='wlsxq_3'>
+         <view class='wlsxq_3_1'>服务线路：366249条</view>
+         <view class='wlsxq_3_1'>服务网点：5699家</view>
+    </view>
+</view>
+
+<view class='p20'>
+ <view class='b_r_1'>
+      <view class='wlsxq_bt1'>线路运价</view>
+      <view class='wlsxq_box'>
+             <view class='wlsxq_box_1'>
+                <view class='wlsxq_01'>线路</view>
+                <view class='wlsxq_02'>参考时效</view>
+                <view class='wlsxq_03'>价格</view>
+                <view class='wlsxq_04'>最低一票</view>
+                <view class='wlsxq_05'>操作</view>
+             </view>
+       <view class='wlsxq_box1'>
+           <view class='wlsxq_box01'>北京-上海</view>
+           <view class='wlsxq_box02'>3-4天</view>
+           <view class='wlsxq_box03'>
+             <view class='wlsxq_box03_1'> 5.41元/公斤</view>
+             <view class='wlsxq_box03_2'> 5.41元/公斤</view>
+           </view>
+           <view class='wlsxq_box04'>30元</view>
+           <view class='wlsxq_box05'>发货</view>
+       </view>
+        <view class='wlsxq_box1'>
+           <view class='wlsxq_box01'>北京-上海</view>
+           <view class='wlsxq_box02'>3-4天</view>
+           <view class='wlsxq_box03'>
+             <view class='wlsxq_box03_1'> 5.41元/公斤</view>
+             <view class='wlsxq_box03_2'> 5.41元/公斤</view>
+           </view>
+           <view class='wlsxq_box04'>30元</view>
+           <view class='wlsxq_box05'>发货</view>
+       </view>
+       <view class='wlsxq_box1'>
+           <view class='wlsxq_box01'>北京-上海</view>
+           <view class='wlsxq_box02'>3-4天</view>
+           <view class='wlsxq_box03'>
+             <view class='wlsxq_box03_1'> 5.41元/公斤</view>
+             <view class='wlsxq_box03_2'> 5.41元/公斤</view>
+           </view>
+           <view class='wlsxq_box04'>30元</view>
+           <view class='wlsxq_box05'>发货</view>
+       </view>
+       <view class='wlsxq_box1'>
+           <view class='wlsxq_box01'>北京-上海</view>
+           <view class='wlsxq_box02'>3-4天</view>
+           <view class='wlsxq_box03'>
+             <view class='wlsxq_box03_1'> 5.41元/公斤</view>
+             <view class='wlsxq_box03_2'> 5.41元/公斤</view>
+           </view>
+           <view class='wlsxq_box04'>30元</view>
+           <view class='wlsxq_box05'>发货</view>
+       </view>
+       <view class='wlsxq_box1'>
+           <view class='wlsxq_box01'>北京-上海</view>
+           <view class='wlsxq_box02'>3-4天</view>
+           <view class='wlsxq_box03'>
+             <view class='wlsxq_box03_1'> 5.41元/公斤</view>
+             <view class='wlsxq_box03_2'> 5.41元/公斤</view>
+           </view>
+           <view class='wlsxq_box04'>30元</view>
+           <view class='wlsxq_box05'>发货</view>
+       </view>
+       <view class='wlsxq_box1'>
+           <view class='wlsxq_box01'>北京-上海</view>
+           <view class='wlsxq_box02'>3-4天</view>
+           <view class='wlsxq_box03'>
+             <view class='wlsxq_box03_1'> 5.41元/公斤</view>
+             <view class='wlsxq_box03_2'> 5.41元/公斤</view>
+           </view>
+           <view class='wlsxq_box04'>30元</view>
+           <view class='wlsxq_box05'>发货</view>
+       </view>
+
+      </view>
+      
+ </view>
+</view>
+
+<view class='p20'>
+   <view class='b_r_1'>
+     <view class='wlsxq_box2'>
+          <view class='wlsxq_box2_1'>产品服务</view>
+          <view class='wlsxq_box2_2'>一、精准卡航</view>
+          <view class='wlsxq_box2_3'>精准卡航，限时送达 承载您对德邦运输时效的信任,助力您的货物快速送达 </view>
+          <view class='wlsxq_box2_3'>
+          快速：精细的线路规划，稳定可靠的车辆性能（进口VOLVO/SCANIA等全封闭厢式卡车），保障您的货物准时、安全送达； 
+安全：采用进口VOLVO/SCANIA等全封闭厢式卡车（车辆自身严密电子系统控制，给车辆带来全方位的保护），GPS全球定位，短信、电话、网络实现全程货物跟踪，使您随时随地掌握货物在途信息；实惠：空运速度，汽运价格。安全快速，限时送达；网络：迅速通达全国188个城市，新线路持续增加中。承载您对德邦运输时效的信任,助力您的货物快速送达；</view>
+          <view class='wlsxq_box2_2'>二、精准城运</view>
+          <view class='wlsxq_box2_3'>精准城运，准点送达 承载您对德邦运输承诺的信任,助力您的货物准点送达； </view>
+          <view class='wlsxq_box2_3'>实现珠三角、长三角、京津唐、山东、辽宁、川渝区域城市之间快速送达；
+准点到达，准点派送；  </view>
+          <view class='wlsxq_box2_2'>三、3.60特惠件</view>
+          <view class='wlsxq_box2_3'>3—60斤，德邦快递 你放心 3.60特惠件，超实惠体验 
+3.60特惠件是德邦特有的快递产品，主要针对3公斤到60斤的重货，您可以用更优惠的价格享受专业、安全的快递服务。 </view>
+<view class='wlsxq_box2_3'>产品优势：
+实惠：3公斤为首重，低续重，高性价比的经济型快递；
+安心：提供免费封箱胶加固及主动开箱验货服务，全程保障货物运输安全；
+贴心：提供免费送货上楼、主动洁净包装及快速理赔服务；
+ </view>
+
+     </view>
+   </view>
+</view>

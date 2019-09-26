@@ -1,0 +1,96 @@
+<!--pages/my_dd_cjwt1 /my_dd_cjwt1.wxml-->
+<view class='cjwt_img'><image class='cjwt_img_1' src='https://style.org.hc360.com/images/logistics/s-program/img01.jpg'></image></view>
+<view class='cjwt_nav'>
+ <view class='cjwt_nav2'>在线发货</view>
+ <view class='cjwt_nav1'>线下发货</view>
+ <view class='cjwt_nav1'>物流常识</view>
+</view>
+
+<view class='p20'>
+  <view class='cjwt_box1'>
+    <view class='cjwt_bt'>如何登录慧聪物流平台？</view>
+    <view class='cjwt_text_1'>
+        <view class='cjwt_text1'>您可以通过以下3种方法之一来登录慧聪物流平台：</view>
+        <view class='cjwt_text1'>1.直接访问：//56.hc360.com</view>
+        <view class='cjwt_text1'>2.您可以进入“慧聪网”首页，找到导航栏“物流平台”直接
+点击进入</view>
+<view class='cjwt_text1'>3.首先登录慧聪首页，点击“网站导航”图标，找到“慧聪物</view>
+
+    </view>
+  </view>
+  <view class='cjwt_box1'>
+    <view class='cjwt_bt'>首次发货如何注册？</view>
+    <view class='cjwt_text_1'>
+        <view class='cjwt_text1'>您可以通过以下3种方法之一来登录慧聪物流平台：</view>
+        <view class='cjwt_text1'>1.直接访问：//56.hc360.com</view>
+        <view class='cjwt_text1'>2.您可以进入“慧聪网”首页，找到导航栏“物流平台”直接
+点击进入</view>
+<view class='cjwt_text1'>3.首先登录慧聪首页，点击“网站导航”图标，找到“慧聪物</view>
+
+    </view>
+  </view>
+
+<view class='cjwt_box1'>
+    <view class='cjwt_bt'>如何在物流平台电脑端下单？</view>
+    <view class='cjwt_text_1'>
+        <view class='cjwt_text1'>您可以通过以下3种方法之一来登录慧聪物流平台：</view>
+        <view class='cjwt_text1'>1.直接访问：//56.hc360.com</view>
+        <view class='cjwt_text1'>2.您可以进入“慧聪网”首页，找到导航栏“物流平台”直接
+点击进入</view>
+<view class='cjwt_text1'>3.首先登录慧聪首页，点击“网站导航”图标，找到“慧聪物</view>
+
+    </view>
+  </view>
+
+
+  <view class='cjwt_box1'>
+    <view class='cjwt_bt'>如何在线查询线路？</view>
+    <view class='cjwt_text_1'>
+        <view class='cjwt_text1'>您可以通过以下3种方法之一来登录慧聪物流平台：</view>
+        <view class='cjwt_text1'>1.直接访问：//56.hc360.com</view>
+        <view class='cjwt_text1'>2.您可以进入“慧聪网”首页，找到导航栏“物流平台”直接
+点击进入</view>
+<view class='cjwt_text1'>3.首先登录慧聪首页，点击“网站导航”图标，找到“慧聪物</view>
+
+    </view>
+  </view>
+
+
+  <view class='cjwt_box1'>
+    <view class='cjwt_bt'>下订单后什么时候审核？</view>
+    <view class='cjwt_text_1'>
+        <view class='cjwt_text1'>您可以通过以下3种方法之一来登录慧聪物流平台：</view>
+        <view class='cjwt_text1'>1.直接访问：//56.hc360.com</view>
+        <view class='cjwt_text1'>2.您可以进入“慧聪网”首页，找到导航栏“物流平台”直接
+点击进入</view>
+<view class='cjwt_text1'>3.首先登录慧聪首页，点击“网站导航”图标，找到“慧聪物</view>
+
+    </view>
+  </view>
+
+  <view class='cjwt_box1'>
+    <view class='cjwt_bt'>如何跟踪物流订单？</view>
+    <view class='cjwt_text_1'>
+        <view class='cjwt_text1'>您可以通过以下3种方法之一来登录慧聪物流平台：</view>
+        <view class='cjwt_text1'>1.直接访问：//56.hc360.com</view>
+        <view class='cjwt_text1'>2.您可以进入“慧聪网”首页，找到导航栏“物流平台”直接
+点击进入</view>
+<view class='cjwt_text1'>3.首先登录慧聪首页，点击“网站导航”图标，找到“慧聪物</view>
+
+    </view>
+  </view>
+
+  <view class='cjwt_box1'>
+    <view class='cjwt_bt'>线上显示的价格是原价，还是折后的价格呢？</view>
+    <view class='cjwt_text_1'>
+        <view class='cjwt_text1'>您可以通过以下3种方法之一来登录慧聪物流平台：</view>
+        <view class='cjwt_text1'>1.直接访问：//56.hc360.com</view>
+        <view class='cjwt_text1'>2.您可以进入“慧聪网”首页，找到导航栏“物流平台”直接
+点击进入</view>
+<view class='cjwt_text1'>3.首先登录慧聪首页，点击“网站导航”图标，找到“慧聪物</view>
+
+    </view>
+  </view>
+ 
+</view>
+

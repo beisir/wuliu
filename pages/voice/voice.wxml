@@ -1,0 +1,2 @@
+<button bindtouchstart='voiceFn' bindtouchend='voiceStopFn'>录制语音</button>
+<!-- <button bindtap="voiceStopFn">停止录音</button> -->

@@ -1,0 +1,113 @@
+<!--pages/sslx/sslx.wxml-->
+
+<!-- 筛选物流商弹框 -->
+<modal hidden="{{!fillateList[3].chooseFlag}}" title="{{modalputName}}" style="width: 100%;height: 100%;" confirm-text="确认" cancel-text="取消" bindcancel="modalCancel" bindconfirm="modalConfirm">
+  <scroll-view scroll-into-view="{{}}" enable-back-to-top style="height: 380rpx;" scroll-y>
+    <checkbox-group class="logistic-group" bindchange="checkboxChange">
+      <label id="{{item.name}}" class="logistic-checkbox" wx:for="{{fillateList[3].list}}" wx:key="{{index}}">
+        <checkbox data-index="{{index}}" value="{{item.name}}" checked="{{item.checked}}" />{{item.name}} ({{item.value}})
+      </label>
+    </checkbox-group>
+  </scroll-view>
+</modal>
+<!-- 筛选弹框 -->
+<view bindtap='hidderFillatePopup' class='fillate-wrap' style='right:{{fillateList[4].chooseFlag ? 0 : "-100%"}};background:{{fillateList[4].chooseFlag ? "rgba(0, 0, 0, .5)" : "rgba(255, 255, 255, 0)"}};'>
+  <view catchtap="a" class='fillate-content'>
+    <view style='padding:40rpx;'>
+      <!-- 服务要求 -->
+      <view style='margin-bottom:30rpx;'>
+        <view class='fillate-title'>服务要求</view>
+        <view class='fillate-items'>
+          <view class="{{item.status ? 'active' : 'fillate-item'}}" catchtap='chooseFillate' data-index="{{index}}" data-type="serverDemand" wx:for="{{fillateServer.serverDemand}}" wx:key="{{index}}">{{item.title}}</view>
+        </view>
+      </view>
+      <!-- 促销活动 -->
+      <view>
+        <view class='fillate-title'>促销活动</view>
+        <view class='fillate-items'>
+          <view class="{{item.status ? 'active' : 'fillate-item'}}" catchtap='chooseFillate' data-index="{{index}}" data-type="severSale" wx:for="{{fillateServer.severSale}}" wx:key="{{index}}">{{item.title}}</view>
+        </view>
+      </view>
+    </view>
+    <view class='fillate-button'>
+      <view catchtap='remakeFillate' data-type="resever" class='fillate-button-btn resever'>重置</view>
+      <view catchtap='fillateConfirm' data-type="confirm" class='fillate-button-btn confirm'>确定</view>
+    </view>
+  </view>
+</view>
+
+<!-- 头部 -->
+<view>
+  <view class="search-head">
+    <view wx:if="{{!chooseFlag && !gsyf}}" class='searchWrap'>
+      <navigator hover-class='none' open-type="navigateBack" url='../ss_wnsb/ss_wnsb' class='searchInput'>
+        <view>{{searchContent}}</view>
+      </navigator>
+    </view>
+    <!-- 排序头部 -->
+    <view class='filtrate'>
+      <block wx:for="{{fillateList}}" wx:key="{{index}}">
+        <view wx:if="{{index !== 1 && index !== 2}}" data-index="{{index}}" data-item="{{item}}" bindtap='fillateChange' class='{{item.chooseFlag ? "sslx_1s_1" : "sslx_1_1"}}'>
+          {{item.title}}
+        </view>
+        <view wx:else data-index="{{index}}" data-item="{{item}}" bindtap='fillateChange' style='{{item.chooseFlag ? "color: #ef3333;border-bottom: 2px #ef3333 solid;" : ""}}' class='{{item.chooseFlag && item.sortFlag && (index === 1 || index === 2) ? "sslx_1s" : "sslx_1"}}'>
+          {{item.title}}
+        </view>
+      </block>
+    </view>
+    <!-- 匹配线路 -->
+    <view class='fhbox_6'>
+      <view class='fhbox_6_1'>已为您精准匹配出
+        <text style='color:red;'>{{logisticNum || 0}} </text>个物流商共
+        <text style='color:red;'>{{lineNum || 0}} </text>条线路
+      </view>
+    </view>
+  </view>
+  <!-- 列表 -->
+  <view style='margin-top: {{ !chooseFlag && !gsyf ? "300rpx;" : "180rpx;"}}'>
+    <block wx:if="{{renderData.length !== 0}}">
+      <view wx:for="{{renderData}}" wx:key="{{index}}" class='searchList'>
+        <view class='searchList-wrap'>
+          <view class='searchList-image-wrap'>
+            <image class='searchList-image' src='{{item.ct || "https://style.org.hc360.com/images/microMall/program/proGimg.png"}}'></image>
+          </view>
+          <view class='searchList-content'>
+            <view class='listTop'>
+              <text class='comName'>{{item.cb}}</text>
+              <image src='../../image/you.png' wx:if="{{item.cb === '天地华宇' || item.cb === '壹米滴答'}}" class='optimization'/>
+            </view>
+            <view class='yx_box3_2'>重货：
+              <text class='color_1'>{{item.heavyPrice || ''}}</text>
+              <text class='color_2'>元</text>/公斤
+              <text class='color_2'>{{item.heavySale || ''}}</text>
+              <text wx:if="{{item.heavySale && item.tm}}" class='del_1'> {{item.tm || ''}}元/公斤)</text>
+            </view>
+            <view class='yx_box3_2'>轻货：
+              <text class='color_1'>{{item.lightPrice || ''}}</text>
+              <text class='color_2'>元</text>/立方
+              <text class='color_2'>{{item.lightSale || ''}}</text>
+              <text wx:if="{{item.lightSale && item.up}}" class='del_1'> {{item.up || ''}}元/立方)</text>
+            </view>
+            <view class='yx_box3_2'>
+              <text class='yx_box3_2'>时效：{{item.jy || ''}} {{item.vu || ''}}</text>
+              <text space="emsp" class='yx_box3_2'> 最低一票：{{item.et || ''}}元</text>
+            </view>
+            <view class='yx_box3_3'>
+              <view wx:for="{{item.serviceList}}" wx:for-index="idx" wx:for-item="ite" wx:key="{{idx}}" class='mf_1'>{{serverDictionary[ite]}}</view>
+            </view>
+            <view class='yx_box3_3'>
+              <view wx:if="{{item.cz}}" class='discountCon'>{{item.cz || ''}}</view>
+            </view>
+          </view>
+        </view>
+        <text>{{JSON.stringify(item)}}</text>
+        <view class='ljxd'>
+          <view style='font-size:26rpx;color:red;display: inline-block;margin: 20rpx 0 0 10rpx;' wx:if="{{item.expressFee}}" class=''>预估金额: {{item.expressFee}}元</view>
+          <button bindtap='toPurchase' data-logistics="{{item}}" class='ksxd1' type='button'>{{chooseFlag ? '确定' : '发货'}}</button>
+        </view>
+      </view>
+    </block>
+    <view hidden='{{showFlag}}' style='width:100%; text-align: center; font-size: 26rpx; color: #999;line-height:500rpx'>没有搜索到该线路的相关数据</view>
+  </view>
+
+</view>

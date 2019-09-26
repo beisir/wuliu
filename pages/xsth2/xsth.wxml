@@ -1,0 +1,55 @@
+<!--pages/xsth/xsth.wxml-->
+<view class='pb20'>
+
+  <view class='p20'>
+    <view class='xsth_1'>
+      <image class='xsth_2' src='https://img011.hc360.cn/k1/M0E/6E/86/Wd9a36451a7D15E9D676B856CC6509D38C.jpg'></image>
+    </view>
+  </view>
+
+  <view class='p20'>
+    <view class='b_r_1'>
+      <view class='xsth_box'>
+        <view class='xsth_3' style='font-weight:bold;text-align:center;'>
+          <span >7月——狂欢壹夏</span></view>
+        <!-- <view class='xsth_3'>8折随性发</view> -->
+        <view class='xsth_4'>
+          <span style='font-weight:bold;'>一、活动时间：</span>
+          <span>2019年7月1日——2019年7月31日</span>
+        </view>
+        <view class='xsth_4' style='font-weight:bold;'>二、活动详情：</view>
+        <view style='text-align:center;' class='xsth_4'>各位老板</view>
+        <view style='text-align:center;' class='xsth_4'>感谢你们一如既往的支持</view>
+        <view style='text-align:center;' class='xsth_4'>感谢你们对壹米滴答的信赖</view>
+        <view style='text-align:center;' class='xsth_4'>感谢你们选择了壹米滴答</view>
+        <view style='text-align:center;' class='xsth_4'>选择壹米滴答</view>
+        <view style='text-align:center;color:red;font-weight:bold;'>低至65折</view>
+        <view style='text-align:center;' class='xsth_4'>足不出户 线上发货</view>
+        <view style='text-align:center;' class='xsth_4'>VIP客服全程跟踪</view>
+        <view style='text-align:center;' class='xsth_4'>优先中转 优先派送</view>
+        <!--<view style='text-align:center;' class='xsth_4'>超时享赔付</view>
+        <view style='text-align:center;' class='xsth_4'>足不出户 线上发货</view>
+        <view style='text-align:center;' class='xsth_4'>VIP客服全程跟踪</view>
+        <view style='text-align:center;' class='xsth_4'>优先中转 优先派送</view>
+        <view style='text-align:center;color:red;font-weight:bold;'>末端无盲区</view>
+        <view style='text-align:center;' class='xsth_4'>超时享赔付</view> -->
+        <view style='text-align:center;color:red;font-weight:bold;'>为您的货物保驾护航</view>
+        <view class='xsth_4' style='font-weight:bold'>说明：</view>
+        <view>
+          <span class='xsth_4'>1、本活动仅针对通过</span>
+          <span class='xsth_4' style='color:red;font-weight:bold'>慧聪物流平台（56.hc360.com）下单</span>
+          <span class='xsth_4'>的客户</span>
+        </view>
+       <!-- <view>
+          <span class='xsth_4'>2、赔付比例视超时天数而定，部分偏远地区不参与超时赔付，具体政策可致电壹米滴答电商客服专线电话：021-39888972咨询，关于超时赔付，请务必于</span>
+          <span style='color:red;font-weight:bold' class='xsth_4'>签收后2日内反馈（包含签收当日）</span>
+          <span  class='xsth_4'>，逾期将不再受理。</span>
+        </view>-->
+        <view class='xsth_4'>3、活动期间如有任何疑问：请致电壹米滴答电商客服专线电话：021-39888972（工作日09:00-20:00，节假日10:00-17:00），节假日期间会对客服的回复时效产生一定的影响，请知悉。</view>
+        <view class='xsth_4'>4、本活动最终解释权归上海壹米滴答供应链管理有限公司所有。</view>
+        <view style='text-align:center;color:red;font-weight:bold' >壹米滴答，只为每壹次托付。</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='xsth_tj' bindtap='toNavigate'>立即下单</view>

@@ -1,0 +1,7 @@
+/* pages/wl_index/sflx.wxss */
+
+.sflx_1{ width: 100%; background: #fff; margin-top: 20rpx; padding: 20rpx 0; border-radius: 10px; }
+.li_1{ height: 54rpx; line-height: 54rpx; clear: both; padding: 10rpx 0;}
+.li_1_left{ font-size: 30rpx; color: #353535; text-indent: 20rpx; float: left; position: relative; width: 100%;}
+.li_1_left_1{ font-size: 30rpx; color: #353535; text-indent: 20rpx; float: left; position: relative; width: 100%; color: #ff4931;}
+.li_1_left_1::after{ content:''; position: absolute; top:0rpx;right:5rpx; display: block; background:url(https://style.org.hc360.com/images/logistics/s-program/ico14.png) no-repeat; width: 54rpx; height: 54rpx; background-size: 54rpx 54rpx; float: right; margin-right: 20rpx;}

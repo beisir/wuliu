@@ -1,0 +1,415 @@
+/**index.wxss**/
+
+view, input {
+  box-sizing: border-box;
+}
+
+.topSearch {
+  background: #fff;
+  height: 106rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.searchCon {
+  padding: 20rpx 40rpx;
+  position: relative;
+  height: 106rpx;
+}
+
+.searchCon view {
+  background: #eee;
+  font-size: 28rpx;
+  height: 66rpx;
+  border-radius: 33rpx;
+  line-height: 66rpx;
+  border: none;
+  width: 100%;
+  padding: 0 70rpx;
+  text-align: center;
+  color: #999;
+}
+
+.searchCon:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 24rpx;
+  left: 40rpx;
+  height: 60rpx;
+  width: 60rpx;
+  background: url(https://style.org.hc360.com/images/logistics/s-program/wlIco.png) 22rpx 17rpx no-repeat;
+  background-size: 300rpx 600rpx;
+}
+
+.yuyinIco {
+  position: absolute;
+  top: 20rpx;
+  right: 40rpx;
+  background: url(https://style.org.hc360.com/images/logistics/s-program/wlIco.png) 52rpx -52rpx no-repeat;
+  background-size: 300rpx 600rpx;
+  height: 66rpx;
+  width: 100rpx;
+}
+
+.scroll {
+  overflow: hidden;
+  position: relative;
+  margin: 126rpx 20rpx 0;
+  border-radius: 18rpx;
+}
+
+.scrollCon {
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scrollImg {
+  width: 100%;
+  height: 230rpx;
+}
+
+.scrollIco {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  right: 0;
+}
+
+.scrollIco icon {
+  display: inline-block;
+  height: 12rpx;
+  width: 12rpx;
+  z-index: 5;
+  background: #fff;
+  margin: 0 10rpx;
+  border-radius: 50%;
+}
+
+.scrollIco icon.cur {
+  background: #ff0f00;
+}
+
+.navBox {
+  height: 185rpx;
+  padding: 10rpx 20rpx 0;
+  background: #fff;
+}
+
+.navBox icon {
+  display: block;
+  width: 70rpx;
+  height: 70rpx;
+  margin: 0 auto;
+  background: url(https://style.org.hc360.com/images/logistics/s-program/wlIco.png) 0 0 no-repeat;
+  background-size: 300rpx 600rpx;
+}
+
+icon.ico1 {
+  width: 90rpx;
+  background-position: -232rpx 10rpx;
+}
+
+icon.ico2 {
+  background-position: -235rpx -75rpx;
+}
+
+icon.ico3 {
+  background-position: -236rpx -160rpx;
+}
+
+icon.ico4 {
+  background-position: -234rpx -234rpx;
+}
+
+.navBox text {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.navTit {
+  float: left;
+  width: 25%;
+  text-align: center;
+  padding: 30rpx 0;
+  height: 185rpx;
+}
+
+.adImg {
+  width: 100%;
+  margin-bottom: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.adImg image {
+  width: 100%;
+}
+
+.titBox {
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #333;
+  font-size: 48rpx;
+  padding: 0 20rpx;
+  margin: 0;
+}
+
+.timeCon {
+  float: right;
+  font-size: 24rpx;
+  color: #666;
+}
+
+.timeCon text {
+  color: #ef3333;
+}
+
+.box1Con {
+  padding: 5rpx 10rpx;
+  display: flex;
+  justify-content: space-around;
+}
+
+.box1ConImg {
+  height: 266rpx;
+  width: 230rpx;
+  margin: 0 7rpx;
+}
+
+.box1ConImg image {
+  height: 200rpx;
+  width: 230rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.box1Img {
+  height: 200rpx;
+  width: 230rpx;
+  box-shadow: 0 0 12rpx #8e99ff;
+  overflow: hidden;
+  border-radius: 10rpx;
+}
+
+.box1ConBot {
+  line-height: 32rpx;
+  font-size: 24rpx;
+  text-align: center;
+  padding: 20rpx 0;
+  color: #333;
+}
+
+.box1ConBot text {
+  color: #fd473c;
+  padding: 0 5rpx;
+}
+
+.box2Con {
+  text-align: center;
+  padding: 10rpx;
+}
+
+.lineCon {
+  display: inline-block;
+  padding: 15rpx 20rpx 0;
+  width: 48%;
+  margin: 0 1%;
+  height: 190rpx;
+  background: #f4f4f4;
+  border-radius: 10rpx;
+  line-height: 86rpx;
+  box-shadow: 0 0 12rpx #808ae6;
+}
+
+.lineName {
+  border-bottom: 1rpx solid #ddd;
+  font-size: 32rpx;
+  color: #333;
+}
+
+.lineConBot {
+  overflow: hidden;
+  text-align: center;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.lineConBot text {
+  color: #fd473c;
+}
+
+.box3Tit {
+  margin: 0 20rpx 15rpx;
+  border-bottom: 1px solid #f4f4f4;
+  text-align: center;
+  height: 66rpx;
+  line-height: 66rpx;
+  font-size: 30rpx;
+  color: #999;
+}
+
+.box3TitCon, .botcur {
+  width: 25%;
+  float: left;
+  margin-bottom: 15rpx;
+}
+
+.botcur {
+  color: #333;
+  position: relative;
+}
+
+.botcur:after {
+  content: "";
+  width: 100rpx;
+  height: 4rpx;
+  background: #fd473c;
+  border-radius: 5rpx;
+  position: absolute;
+  bottom: -1rpx;
+  left: 50%;
+  margin-left: -50rpx;
+  display: block;
+}
+
+.tabBotCon {
+  padding: 0 20rpx;
+}
+
+.tabBotList {
+  padding: 30rpx 0;
+  min-height: 180rpx;
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.tabBotListG {
+  width: 100%;
+  padding: 30rpx;
+  height: 258rpx;
+  border-bottom: 1px solid #f4f4f4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoImg {
+  float: left;
+  border-radius: 10rpx;
+  box-shadow: 0 0 12rpx #bdc2f0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.logoImg image {
+  width: 120rpx;
+  height: 60rpx;
+}
+
+.logoImgG image {
+  width: 120rpx;
+  height: 60rpx;
+}
+
+.logoImgG {
+  border-radius: 10rpx;
+  box-shadow: 0 0 12rpx #bdc2f0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  max-width: 120rpx;
+  max-height: 120rpx;
+  min-width: 120rpx;
+  min-height: 120rpx;
+  flex: 1 0 120rpx;
+}
+
+.logoImgRig {
+  padding-left: 35rpx;
+  float: left;
+  width: calc(100% - 125rpx);
+  position: relative;
+}
+
+.logoImgRigG {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comName {
+  width: 80%;
+  font-size: 26rpx;
+  color: #333;
+  padding-bottom: 8rpx;
+}
+
+.comNameG {
+  font-size: 26rpx;
+  color: #333;
+  margin-bottom: 8rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  height: 40rpx;
+  /* width: calc(100% - 100rpx); */
+}
+
+.comPrompt {
+  font-size: 24rpx;
+  color: #666;
+  padding-bottom: 10rpx;
+  display: block;
+}
+
+.comPromptG {
+  font-size: 24rpx;
+  height: 70rpx;
+  color: #666;
+  margin-bottom: 10rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.discountCon {
+  font-size: 22rpx;
+  background-image: -webkit-linear-gradient(left, #0303fd, #ff00ea);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-background-size: 200% 100%;
+  -webkit-animation: masked-animation 4s infinite linear;
+  border: 1px solid #0303fd;
+  border-radius: 8rpx;
+  text-align: center;
+  float: left;
+  padding: 0 15rpx;
+}
+
+.kmNum {
+  top: 0;
+  right: 0;
+  color: #fd473c;
+  font-size: 24rpx;
+}
+
+.kmNumG {
+  color: #fd473c;
+  font-size: 24rpx;
+  flex: 1 0 auto;
+  text-align: right;
+}

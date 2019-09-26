@@ -1,0 +1,15 @@
+/* pages/favorites/favorites.wxss */
+page{background:#f7f7f7;}
+.searchList{margin: 20rpx 20rpx 0; background: #fff; padding: 0 20rpx;}
+.listTop{border-bottom:1rpx solid #f7f7f7; height:88rpx; line-height: 88rpx; font-size: 34rpx; color: #333;}
+.listTop .comName{float: left; width:75%;text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+.listTop .kmNum{float: right; color: #fd473c;}
+.comPrompt{padding-top:20rpx; font-size: 26rpx; color: #666; line-height: 40rpx;}
+.serviceCon{font-size: 26rpx; color: #666; line-height: 40rpx; overflow: hidden;}
+.serviceCon text{width:40%; display: block; float: left; padding-bottom: 10rpx;}
+.discountCon{ font-size: 22rpx;background-image: -webkit-linear-gradient(left, #0303fd, #ff00ea);-webkit-text-fill-color: transparent;-webkit-background-clip: text;-webkit-background-size: 200% 100%;-webkit-animation: masked-animation 4s infinite linear; border: 1px solid #0303fd; border-radius:8rpx; text-align: center; float: left; padding: 0 15rpx; margin-bottom: 28rpx;}
+.listBot{ overflow: hidden; border-top: 1rpx solid #f7f7f7; clear: both; height: 106rpx;}
+.listBot icon{display: block; float: left; width: 50rpx; height: 52rpx; margin-right: 56rpx;background:url(https://style.org.hc360.com/images/logistics/s-program/wlIco2.png) no-repeat;background-size:300rpx 600rpx;margin-top: 28rpx;}
+.listBot icon.telIco{ background-position:0 -340rpx;}
+.listBot icon.collectionIco{ background-position:0 -400rpx;}
+.listBot button{float:right;background-image: -webkit-linear-gradient(90deg, #fd483d, #ff7068); color: #fff; width:160rpx;height:60rpx; font-size: 24rpx; line-height: 60rpx; margin-top: 23rpx;}

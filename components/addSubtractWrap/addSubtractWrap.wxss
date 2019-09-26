@@ -1,0 +1,33 @@
+/* components/addSubtractWrap/addSubtractWrap.wxss */
+
+.add-subtrack-wrap {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.button {
+  width: 40rpx;
+  line-height: 40rpx;
+  padding: 10rpx;
+}
+
+.j_ico1 {
+  float: left;
+  /* padding-right: 2rpx; */
+  font-size: 30rpx;
+  color: #666;
+  cursor: pointer;
+  width: 50rpx;
+  text-align: center;
+}
+
+.j_ico2 {
+  float: left;
+  /* padding-left: 10rpx; */
+  font-size: 30rpx;
+  color: #666;
+  cursor: pointer;
+  width: 50rpx;
+  text-align: center;
+}

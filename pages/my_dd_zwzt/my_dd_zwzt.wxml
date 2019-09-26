@@ -1,0 +1,14 @@
+<!--pages/my_dd_zwzt/my_dd_zwzt.wxml-->
+<view class='topSearch'>
+  <view class='searchCon'><input placeholder-class="phcolor" type='text' placeholder='北京  上海  线路' /><icon class='yuyinIco'></icon></view>
+</view>
+
+<view class='fhxl_1'>
+ <view class='fhxl_1_1'>近一个000月的</view>
+ <view class='fhxl_1_2'>全部11</view>
+
+         <view class='sflx_4'>
+             <view class='zwzt_1'></view>
+         </view>
+</view>
+

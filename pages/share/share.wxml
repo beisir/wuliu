@@ -1,0 +1,63 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='box1'>
+    <image src='https://style.org.hc360.com/images/logistics/0823/wl9_x_img_01.jpg'></image>
+  </view>
+  <view class='box2'>
+    <image src='https://style.org.hc360.com/images/logistics/0823/wl9_x_img_02.jpg'></image>
+    <view class="txt1">
+      已有
+      <text class='nom'>{{534 + (560 * date)}}</text>人已领
+      <text class='tsg'>限量抢</text>
+    </view>
+    <view class="txt2">
+      已有
+      <text class='nom'>{{439 + (390 * date)}}</text>人已领
+      <text class='tsg'>限量抢</text>
+    </view>
+    <view class="txt3">
+      已有
+      <text class='nom'>{{320 + (99 * date)}}</text>人已领
+      <text class='tsg'>限量抢</text>
+    </view>
+    <view class="txt4">
+      已有
+      <text class='nom'>{{180 + (58 * date)}}</text>人已领
+      <text class='tsg'>限量抢</text>
+    </view>
+  </view>
+  <view class='box3'>
+    <image class='imgbg3' src='https://style.org.hc360.com/images/logistics/0823/wl9_x_img_03.jpg'></image>
+    <image class='img1' src='https://style.org.hc360.com/images/logistics/0823/wl9_x_img_13.jpg'></image>
+    <image class='img2' src='https://style.org.hc360.com/images/logistics/0823/wl9_x_img_14.jpg'></image>
+    <image class='img3' src='https://style.org.hc360.com/images/logistics/0823/wl9_x_img_15.jpg'></image>
+    <image class='img4' src='https://style.org.hc360.com/images/logistics/0823/wl9_x_img_16.jpg'></image>
+  </view>
+  <view class='box4'>
+    <image src='https://style.org.hc360.com/images/logistics/0823/wl9_x_img_04.jpg'></image>
+  </view>
+  <view class='box5'>
+    <image src='https://style.org.hc360.com/images/logistics/0823/wl9_x_img_05.jpg'></image>
+  </view>
+  <view class='box6'>
+    <image src='https://style.org.hc360.com/images/logistics/0823/wl9_x_img_10.jpg'></image>
+    <text bindtap='toIndex' class='goBtn1'>去惠物流小程序首页 ></text>
+    <text bindtap='toIndex' class='goBtn2'>全场最低五折，各物流商折扣请见 ></text>
+  </view>
+  <view class='box7'>
+    <button open-type='share' class='goBtn3'>转发</button>
+    <view bindtap='shipments' class='goBtn4'>马上发货</view>
+  </view>
+</view>
+
+<view hidden="{{hiddenmodal}}" class='popBox'>
+  <view class='popCon'>
+    <view bindtap='modalCancel' class='close'></view>
+    <view class='popTxt'>
+      <view class='nom'>{{discountCouponRender.discount}}</view>
+      <view class='data'>{{discountCouponRender.beginTime}}至{{discountCouponRender.endTime}}</view>
+      <view class='name'>（限{{discountCouponRender.logisticName}}物流使用）</view>
+      <view class='tsg'>请在“我的”-“优惠券”中查看,或在下单时选择使用</view>
+    </view>
+  </view>
+</view>

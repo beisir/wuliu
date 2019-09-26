@@ -1,0 +1,38 @@
+<!--index.wxml-->
+<view class='p20'>
+  <view class='b_r'>
+    <view class='dzb_1'>
+      <text selectable="true" style='overflow-y: auto;height:240rpx;' class='text1' maxlength="100">{{contactsInfo.data ? contactsInfo.data : '上传图片，自动识别地址信息'}}</text>
+      <icon bindtap='chooseImage' class='ico_1'></icon>
+       <view class='num_t'>{{(contactsInfo.data.length ? contactsInfo.data.length : 19)}}</view> 
+    </view>
+  </view>
+  <view class='b_r'>
+    <view class='b_r_li1'>
+      <text space="emsp" class='b_r_bt'>联系人:</text>
+      <input bindinput="inputValue" data-type="contacter" placeholder="必填" class='b_r_ipt' value='{{contactsInfo.contacter && contactsInfo.contacter }}'></input>
+    </view>
+    <view class='b_r_li1'>
+      <text space="emsp" class='b_r_bt'>电 话:</text>
+      <input bindinput="inputValue" data-type="mobile" placeholder="必填" class='b_r_ipt' value='{{contactsInfo.mobile && contactsInfo.mobile }}'></input>
+      <!-- <view class='b_r_xz' bindtap='chooseContacts'>选择联系人</view> -->
+    </view>
+    <view class='b_r_li1'>
+      <text space="emsp" class='b_r_bt'>省市区:</text>
+      <!-- <input placeholder='黑龙江省 哈尔滨市 南岗区' class='b_r_ipt'></input> -->
+      <picker class='b_r_ipt' mode="region" bindchange="bindRegionChange" value="{{region}}">
+        <view class="picker">
+          {{region[0]}}，{{region[1]}}，{{region[2]}}
+        </view>
+      </picker>
+    </view>
+    <view class='b_r_li1'>
+      <text space="emsp" class='b_r_bt'>街 道:</text>
+      <input style='width:75%;' maxlength="100" data-type="address" bindinput="inputValue" placeholder="必填"  value='{{contactsInfo.address && contactsInfo.address }}' class='b_r_ipt'></input>
+    </view>
+  </view>
+
+</view>
+<view bindtap='submitData' class='bc_btn'>
+  {{contactsInfo.status ? '修改' : '保存'}}
+</view>

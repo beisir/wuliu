@@ -1,0 +1,177 @@
+<!--pages/ ddxq/ ddxq.wxml-->
+<view class='p20' wx:if="{{renderData.oderDetail}}">
+
+  <view class='b_r_1'>
+    <view class='ddxq_box1'>
+      <view class='ddxq_3'>订单编号：{{renderData.oderDetail.orderCode || ''}}</view>
+      <view class='ddxq_1'>物流公司：{{renderData.oderDetail.logisticsName || ''}}</view>
+      <view class='ddxq_2'>{{renderData.oderDetail.stateStr}}</view>
+    </view>
+    <view class='ddxq_3'>运单号：{{renderData.oderDetail.logisticOrderCode || '暂无'}}</view>
+    <view class='ddxq_4'>下单时间：{{renderData.oderDetail.createTime || ''}}</view>
+  </view>
+
+  <view class='b_r_1'>
+    <view class='ddxq_box2'>
+      <view class='ddxq_box1'>
+        <view class='ddxq_1'>寄件人：{{renderData.oderDetail.consignerName}}</view>
+        <view class='ddxq_2_1'>{{renderData.oderDetail.consignerMobile}}</view>
+      </view>
+      <view class='ddxq_3_1'>{{renderData.oderDetail.consignerAddress}}</view>
+    </view>
+    <view class='ddxq_box3'>
+      <view class='ddxq_box1'>
+        <view class='ddxq_1'>收货人：{{renderData.oderDetail.receiveName}}</view>
+        <view class='ddxq_2_1'>{{renderData.oderDetail.receiveMobile}}</view>
+      </view>
+      <view class='ddxq_3_1'>{{renderData.oderDetail.receiveAddress}}</view>
+    </view>
+  </view>
+
+  <view class='b_r_1'>
+    <view class='ddxq_bt1'>货物详情</view>
+    <view class='ddxq_box1'>
+      <view class='ddxq_1'>物品名称</view>
+      <view style='width:calc(100% - 260rpx);padding:0 30rpx;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;text-align:right;' class='ddxq_2_1'>{{renderData.oderDetail.goodsName}}</view>
+    </view>
+    <view class='ddxq_box1'>
+      <view class='ddxq_1'>总重量</view>
+      <view class='ddxq_2_1'>{{renderData.oderDetail.goodsWeight}}公斤</view>
+    </view>
+    <view class='ddxq_box1'>
+      <view class='ddxq_1'>总体积</view>
+      <view class='ddxq_2_1'>{{renderData.oderDetail.goodsVolume}}立方</view>
+    </view>
+    <view class='ddxq_box1'>
+      <view class='ddxq_1'>总件数</view>
+      <view class='ddxq_2_1'>{{renderData.oderDetail.goodsNumber}}件</view>
+    </view>
+    <view class='ddxq_box1'>
+      <view class='ddxq_1'>实际货物金额</view>
+      <view class='ddxq_2_1'>{{renderData.oderDetail.goodsAmount}}</view>
+    </view>
+    <view class='ddxq_box1'>
+      <view class='ddxq_1'>备注信息</view>
+      <view style='padding:0 30rpx;background:white;height:auto;border-bottom:1px solid #f7f7f7;font-size:28rpx;' class='ddxq_2_1'>{{renderData.oderDetail.notice || ''}}</view>
+    </view>
+  </view>
+
+  <view class='b_r_1'>
+    <view class='ddxq_bt2'>发货网点</view>
+    <view class='ddxq_box2'>
+      <view class='ddxq_3_2'>{{renderData.oderDetail.consignerOutlets || '暂无'}}</view>
+      <view class='ddxq_3_2'>电话：{{renderData.oderDetail.consignerOutletsTel || '暂无'}}</view>
+    </view>
+    <view class='ddxq_bt3'>收货网点</view>
+    <view class='ddxq_box4'>
+      <view class='ddxq_3_2'>{{renderData.oderDetail.receiveOutlets || '暂无'}}</view>
+      <view class='ddxq_3_2'>电话：{{renderData.oderDetail.receiveOutletsTel || '暂无'}}</view>
+    </view>
+  </view>
+
+  <!-- 物流信息 -->
+  <view class='p20'>
+    <view class='ddxq_bt4'>物流详情</view>
+    <view class='b_r_1'>
+      <view wx:if="{{renderData.track.length !== 0}}" class='ddxq_box5'>
+        <view class='ddxq_box5_left'>
+          <block wx:for='{{ renderData.track }}' wx:key='{{ index }}'>
+            <view class='ddxq_box5_1'>
+              <!-- <view class='ddxq_sj1'>{{ item.dateString }}</view> -->
+              <view class='ddxq_sj2'>{{ item.ftime }}</view>
+              <view wx:if="{{ renderData.oderDetail.state === '6' && index === 0 }}" class='ddxq_box5_ico1'></view>
+
+              <view wx:else class='ddxq_box5_ico2'></view>
+            </view>
+          </block>
+        </view>
+        <view class='ddxq_box5_right'>
+          <block wx:for="{{ renderData.track }}" wx:key='{{ index }}'>
+            <view class='ddxq_right_box1'>
+              <view class='{{ renderData.oderDetail.state === "6" && index === 0 ? "right_box1_1" : "right_box1_2"}}'>{{ item.context }}</view>
+            </view>
+          </block>
+        </view>
+      </view>
+      <view style='text-align: center;color: #999;font-size: 26rpx;' class='ddxq_box5 empty' wx:else>
+        当前无物流信息
+      </view>
+    </view>
+  </view>
+
+  <view class='b_r_1'>
+    <view class='ddxq_box6_1'>
+      <view class='ddxq_bt5'>线路价格</view>
+      <view class='ddxq_box6_t1'>{{renderData.oderDetail.discountId ? '优惠券' : rebateTypeDic[renderData.oderDetail.rebateType]}}
+        <text wx:if="{{renderData.oderDetail.rebate !== 10}}" class='zk_color'>{{renderData.oderDetail.rebate || ''}}折</text>
+      </view>
+    </view>
+    <view class='ddxq_box6_2'>
+      <view class='ddxq_box6_2box1'>
+        <view class='box6_2box1_2'>
+          <image class='box6_2box1_3' src='{{renderData.oderDetail.logisticsLogoUrl}}'></image>
+        </view>
+        <view class='box6_2box1_1'>{{renderData.shtStartPlace}}-{{renderData.shtEndPlace}}</view>
+      </view>
+      <view class='ddxq_box6_2box1'>
+        <view class='ddxq_box6_2box1_1'>{{renderData.oderDetail.transportLimitations}}</view>
+        <view class='ddxq_box6_2box1_2'>{{renderData.oderDetail.productName}}</view>
+      </view>
+    </view>
+    <view class='ddxq_box6_3'>
+      <view class='ddxq_box6_3_1'>重货：{{renderData.oderDetail.rebateHeavyPrice}}元/公斤{{renderData.oderDetail.rebate !== 10 ? '('+renderData.oderDetail.rebate+')折':''}}</view>
+      <view class='ddxq_box6_3_1'>轻货：{{renderData.oderDetail.rebateLightPrice}}元/公斤{{renderData.oderDetail.rebate !== 10 ? '('+renderData.oderDetail.rebate+')折':''}}</view>
+      <view class='ddxq_box6_3_1'>最低一票：{{renderData.oderDetail.lowestVote}}元</view>
+    </view>
+
+  </view>
+
+  <view class='b_r_1'>
+    <view class='ddxq_bt6'>运费估算</view>
+    <view class='ddxq_box7_1'>
+      <view class='ddxq_box7_1_1'>费用详情：</view>
+    </view>
+    <!-- <view class='ddxq_box7_1'>
+      <view class='ddxq_box7_1_3'>纯运费：</view>
+      <view class='ddxq_box7_1_4'>￥{{renderData.oderDetail.pureCost}}</view>
+    </view> -->
+    <view class='ddxq_box7_1'>
+      <view class='ddxq_box7_1_3'>基础费用：</view>
+      <view class='ddxq_box7_1_4'>￥{{renderData.oderDetail.baseCost}}</view>
+    </view>
+    <view class='ddxq_box7_1'>
+      <view class='ddxq_box7_1_3'>附加费用：</view>
+      <view class='ddxq_box7_1_4'>￥{{renderData.oderDetail.additionalCost}}</view>
+    </view>
+    <!-- 当存在discountId时,说明使用优惠券 -->
+    <view wx:if="{{renderData.oderDetail.discountId}}" class='ddxq_box7_1' style='display:flex; justify-content: space-between;margin-top:20rpx'>
+      <view class='ddxq_box7_1_1'>
+        <text>优惠券：</text>
+        <text wx:if="{{renderData.oderDetail.discountId == -1}}" class='ksxd_box4_nom'>已退回</text>
+      </view>
+      <view>
+        <view class='ddxq_box7_1_4'>纯运费 {{renderData.oderDetail.rebate || ''}} 折 </view>
+        <view class='ddxq_box7_1_4'> (优惠：¥{{renderData.oderDetail.saveAmount || ''}})</view>
+      </view>
+    </view>
+
+    <view class='ddxq_box7_2'>
+      <view class='ddxq_box7_1_1'>预估总金额：</view>
+      <view class='ddxq_box7_1_2'>￥{{renderData.oderDetail.estimateAmount}}</view>
+      <!-- <view class='ddxq_box7_fh'>再次发货</view> -->
+    </view>
+  </view>
+
+  <picker wx:if="{{renderData.oderDetail.stateStr === '未受理' || renderData.oderDetail.stateStr === '已受理'}}" style='width:100%;line-height:40px;background:rgb(248, 56, 6);border-radius:10rpx; color:white; text-align:center;' bindchange="cancelOrder" value="{{cancelIndex}}"
+    range="{{cancelReason}}">
+    <view>
+      撤销订单
+    </view>
+  </picker>
+  <view class='ddxq_box8'>
+    <view class='ddxq_box8_2'>
+      <image class='box6_2box1_3' src='{{renderData.oderDetail.logisticsLogoUrl}}'></image>
+    </view>
+    <view class='ddxq_box8_1'>官方电话：{{renderData.oderDetail.supportPhone}}</view>
+  </view>
+</view>

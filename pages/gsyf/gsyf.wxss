@@ -1,0 +1,97 @@
+/* pages/gsyf/gsyf.wxss */
+
+.gsyf_4_1 {
+  font-size: 34rpx;
+  color: #333;
+  float: left;
+  padding-left: 25rpx;
+  width: 196rpx;
+}
+
+.gsyf_4_1_2 {
+  font-size: 34rpx;
+  color: #333;
+  float: left;
+  padding-left: 42rpx;
+  width: 100rpx;
+}
+
+.gsyf_4_01 {
+  font-size: 34rpx;
+  color: #333;
+  float: left;
+  padding-left: 25rpx;
+}
+
+.gsyf_4_2 {
+  font-size: 24rpx;
+  color: #999;
+  float: left;
+  height: 70rpx;
+  line-height: 70rpx;
+  border: 1rpx #dfdfdf solid;
+  text-indent: 10rpx;
+  width: 260rpx;
+}
+
+.gsyf_4_2s {
+  font-size: 24rpx;
+  color: #999;
+  float: left;
+  padding: 0 25rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  border: 1rpx #dfdfdf solid;
+  text-align: center;
+  width: 210rpx;
+  /* margin-left: 48rpx; */
+}
+
+.gsyf_4_2s_1 {
+  font-size: 24rpx;
+  color: #999;
+  float: left;
+  padding-right: 25rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  border: 1rpx #dfdfdf solid;
+  text-indent: 10rpx;
+  width: 500rpx;
+  margin-left: 10rpx;
+}
+
+.gsyf_4_4 {
+  font-size: 34rpx;
+  color: #333;
+  float: right;
+  padding-right: 5rpx;
+  width: 82rpx;
+  overflow: hidden;
+}
+
+.gsyf_4_2_1s {
+  font-size: 24rpx;
+  color: #999;
+  float: right;
+  padding-right: 100rpx;
+  position: relative;
+}
+
+.gsyf_4_2_1s::after {
+  content: '';
+  position: absolute;
+  top: 10rpx;
+  right: 10rpx;
+  display: block;
+  background: url(https://style.org.hc360.com/images/logistics/s-program/ico55.png) no-repeat;
+  width: 54rpx;
+  height: 54rpx;
+  background-size: 54rpx 54rpx;
+  float: left;
+}
+
+.xicn {
+  color: #fd483b;
+  font-size: 24rpx;
+  padding-right: 10rpx;
+}

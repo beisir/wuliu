@@ -1,0 +1,8 @@
+/* pages/edit/index.wxss */
+page{height:100%;background:#f6f6f6;}
+.container{background:#f6f6f6;overflow:hidden;}
+.infoBox{background:#fff;padding:20rpx 40rpx;}
+.itxt,.itxtCur{clear:both;font-size:34rpx;line-height:80rpx;display:block;position:relative;}
+.itxt{color:#353535;}
+.itxtCur{color:#ef322c;}
+.itxtCur::after{width:38rpx;height:38rpx;display:block;background:url(https://style.org.hc360.com/images/cpk/p_c_ico.png) no-repeat -370rpx 0;background-size:500rpx 48rpx; content:""; vertical-align: middle;position:absolute;right:0;top:21rpx;}

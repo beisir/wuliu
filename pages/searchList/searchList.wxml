@@ -1,0 +1,51 @@
+<!--pages/searchList/searchList.wxml-->
+<view class='searchList'>
+  <view class='listTop'><text class='comName'>天地华宇/北京七里渠分布北京七里渠分布</text><text class='kmNum'>2.3KM</text></view>
+  <text class='comPrompt'>最低一票：200元  0.51元/公斤-148.5元/立方</text>
+  <view class='serviceCon'><text>上门接货：免费</text><text>送货上门：免费</text></view>
+  <view class='discountCon'>发往天津限时8.5折</view>
+  <view class='listBot'>
+    <icon class='telIco'></icon><icon class='collectionIco'></icon><button type='button'>立即下单</button>
+  </view>
+</view>
+<view class='searchList'>
+  <view class='listTop'><text class='comName'>天地华宇/北京七里渠分布北京七里渠分布</text><text class='kmNum'>2.3KM</text></view>
+  <text class='comPrompt'>最低一票：200元  0.51元/公斤-148.5元/立方</text>
+  <view class='serviceCon'><text>上门接货：免费</text><text>送货上门：免费</text></view>
+  <view class='discountCon'>发往天津限时8.5折</view>
+  <view class='listBot'>
+    <icon class='telIco'></icon><icon class='collectionIco'></icon><button type='button'>立即下单</button>
+  </view>
+</view>
+<view class='searchList'>
+  <view class='listTop'><text class='comName'>天地华宇/北京七里渠分布北京七里渠分布</text><text class='kmNum'>2.3KM</text></view>
+  <text class='comPrompt'>最低一票：200元  0.51元/公斤-148.5元/立方</text>
+  <view class='serviceCon'><text>上门接货：免费</text><text>送货上门：免费</text></view>
+  <view class='discountCon'>发往天津限时8.5折</view>
+  <view class='listBot'>
+    <icon class='telIco'></icon><icon class='collectionIco'></icon><button type='button'>立即下单</button>
+  </view>
+</view>
+<view class='searchList'>
+  <view class='listTop'><text class='comName'>天地华宇/北京七里渠分布北京七里渠分布</text><text class='kmNum'>2.3KM</text></view>
+  <text class='comPrompt'>最低一票：200元  0.51元/公斤-148.5元/立方</text>
+  <view class='serviceCon'><text>上门接货：免费</text><text>送货上门：免费</text></view>
+  <view class='discountCon'>发往天津限时8.5折</view>
+  <view class='listBot'>
+    <icon class='telIco'></icon><icon class='collectionIco'></icon><button type='button'>立即下单</button>
+  </view>
+</view>
+<view class='searchList'>
+  <view class='listTop'><text class='comName'>天地华宇/北京七里渠分布北京七里渠分布</text><text class='kmNum'>2.3KM</text></view>
+  <text class='comPrompt'>最低一票：200元  0.51元/公斤-148.5元/立方</text>
+  <view class='serviceCon'><text>上门接货：免费</text><text>送货上门：免费</text></view>
+  <view class='discountCon'>发往天津限时8.5折</view>
+  <view class='listBot'>
+    <icon class='telIco'></icon><icon class='collectionIco'></icon><button type='button'>立即下单</button>
+  </view>
+</view>
+<view class="more">
+  <view class='lineBot'>
+    <text class='textBot'>没有更多了</text>
+  </view>
+</view>

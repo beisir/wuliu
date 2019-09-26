@@ -1,0 +1,399 @@
+<!--pages/ksxd/ksxd.wxml-->
+<view style='width:100%; height:20rpx;'></view>
+<view class='fhbox'>
+  <view bindtap='reverseAddressList' class='fhico'></view>
+  <view hidden="{{addressThinkShowIndex !== index && addressThinkShowStatus}}" class='fhbox_4' wx:for="{{addressList}}" wx:key="{{index}}">
+    <view class='{{index == 0 ? "fhbox_2" : "fhbox_3"}}'></view>
+    <view bindtap='pullDownInputShow' data-index="{{index}}">
+      <!-- 收/发货人 -->
+      <view wx:if="{{item.area || item.address}}" class='fhbox_4_1'>{{item.area || ''}} {{item.address || ''}}</view>
+      <!-- <view wx:elif="{{logistics && !item.area}}" class='fhbox_4_1'>{{index === 0 ? logistics.city : logistics.eCity}} {{item.address}}</view> -->
+      <view wx:else class='fhbox_4_1'>{{index === 0 ? '请输入收货信息' : '请输入收货信息'}}</view>
+      <view style='border-bottom: none;' hidden="{{pullDownInputShowStatus[index]}}" class='fhbox_4_2' type='text' placeholder=''>{{item.contacter || ''}} {{item.mobile || ''}}</view>
+      <!-- <view wx:else class='fhbox_4_2' style='color:#999;' type='text' placeholder=''>请完善联系人信息</view> -->
+    </view>
+    <!-- <view bindtap='pullDownInputShow' data-index="{{index}}" wx:else>{{index === 0 ? '请输入发货人信息' : '请选择收货地址'}}</view> -->
+    <view wx:show="{{pullDownInputShowStatus[index]}}" class='xiala' style='height: {{pullDownInputShowStatus[index] ? "260rpx" : "0" }}'>
+      <!-- 姓名 -->
+      <input maxlength="4" data-index="{{index}}" bindblur="blurLinkman" bindfocus='focusLinkman' bindinput="inputLinkman" data-type="contacter" value='{{item.contacter || ""}}' placeholder-class="phcolor" class='fhbox_4_2' type='text' placeholder='姓名' />
+      <!-- 手机号码 -->
+      <input data-index="{{index}}" bindblur="blurLinkman" bindfocus='focusLinkman' bindinput="inputLinkman" data-type="mobile" value='{{item.mobile || ""}}' placeholder-class="phcolor" class='fhbox_4_2' type='text' placeholder='手机号或固话,任意一个' />
+      <!-- 选择省市区 -->
+      <view class='b_r_li1'>
+        <picker data-index="{{index}}" class='b_r_ipt' mode="region" bindchange="bindRegionChange" value="{{region[index]}}">
+          <view class="picker">
+            <block wx:if="{{region[index][0]}}">{{region[index][0]}},</block>
+            <block wx:if="{{region[index][2]}}">{{region[index][1]}},</block>
+            <block wx:else>{{region[index][1]}}</block>
+            {{region[index][2]}}
+
+            <!-- {{region[index][0]}}，{{region[index][1]}}，{{region[index][2]}} -->
+          </view>
+        </picker>
+      </view>
+      <!-- 详细地址 -->
+      <input data-index="{{index}}" bindfocus="focusLinkman" bindconfirm="blurLinkman" bindinput="inputLinkman" data-type="address" value='{{item.address || ""}}' placeholder-class="phcolor" class='fhbox_4_2' type='text' placeholder='详细地址' />
+      <view data-type="{{index}}" bindtap="chooseAddress" class='gd_dz'>更多地址></view>
+    </view>
+    <view bindtap='chooseAddress' data-type="{{index}}" class='{{index == 0 ? "fhbox_5" : "fhbox_5_ico"}}'></view>
+  </view>
+</view>
+
+<!-- 联想地址 -->
+<scroll-view style="height:calc(100% - 440rpx)" scroll-y hidden='{{!addressThinkShowStatus}}' class='dizhi'>
+  <!-- <view>历史记录</view> -->
+  <block wx:if="{{!addressThinkHistoryStatus}}">
+    <view wx:if="{{addressThinkRenderData.length !== 0}}" style='padding:0 30rpx;'>
+      <view style='width:95%;' class='dizhi_1' data-item='{{item}}' bindtap='chooseThinkAddress' wx:for="{{addressThinkRenderData}}" wx:key="index">
+        <view style='flex: 1 1 auto;width:70%;'>
+          <view style='font-size:28rpx;color:black;overflow:hidden;text-overflow:ellipsis;white-space: nowrap;'>{{item.name || ''}}</view>
+          <view style='overflow:hidden;text-overflow:ellipsis;white-space: nowrap;'>{{item.address || ''}}</view>
+        </view>
+        <view style='flex: 0 0 auto;' class='juli'>{{item.distanceStr || ''}}</view>
+      </view>
+    </view>
+    <view style='text-align:center;font-size:24rpx;color:#999;' wx:else>没有搜到附近相关地址，请重新尝试.</view>
+  </block>
+  <!-- 历史记录 -->
+  <block wx:else>
+    <view wx:if="{{addressThinkHistoryRenderData.length !== 0}}" style='padding:0 30rpx;'>
+      <view style='width:95%;' class='dizhi_1' data-item='{{item}}' bindtap='chooseThinkAddress' wx:for="{{addressThinkHistoryRenderData}}" wx:key="index">
+        <view style='flex: 1 1 auto;width:70%;'>
+          <view style='font-size:28rpx;color:black;overflow:hidden;text-overflow:ellipsis;white-space: nowrap;'>{{item.name || ''}}</view>
+          <view style='overflow:hidden;text-overflow:ellipsis;white-space: nowrap;'>{{item.address || ''}}</view>
+        </view>
+        <!-- 距离 -->
+        <view style='flex: 0 0 auto;' class='juli'>{{item.distanceStr || ''}}</view>
+
+      </view>
+    </view>
+    <view style='text-align:center;font-size:24rpx;color:#999;' wx:else>没有历史记录</view>
+    <button bindtap='clearAddressHistory' class='clearAddressHistory'>清空历史记录</button>
+  </block>
+</scroll-view>
+
+<view style='padding-bottom: 400rpx;' hidden='{{addressThinkShowStatus}}'>
+  <!-- 货物信息 -->
+  <view class='p20'>
+    <view class='b_r_1'>
+      <view class='gsyf_3'>
+        <view class='gsyf_3_1_1'>货物信息</view>
+        <navigator hover-class='none' url='../my_dd_fh/my_dd_fh?navigateFlag=true' class='gsyf_4_2_ls'>使用历史发货记录 ></navigator>
+      </view>
+      <view style='justify-content:start;' class='gsyf_4'>
+        <view class='gsyf_4_1'>
+          <text class='xicn'>*</text>物品名称</view>
+        <view style='width:404rpx;text-align:center;display:flex;justify-content:center;'>
+          <input maxlength="20" bindinput='input' data-type="goodsName" bindblur='inputBlur' type="text" value='{{goodsInfo.goodsName}}' class='gsyf_4_2s' type='text' placeholder='请输入物品名称' />
+        </view>
+      </view>
+      <view class='gsyf_4'>
+        <view class='gsyf_4_1'>
+          <text class='xicn'>*</text>总重量</view>
+        <add-subtrack-wrap bindcomChangeData="comChangeData" prop-key="goodsInfo.goodsWeight" prop-initial="{{goodsInfo.goodsWeight}}">
+          <input maxlength="8" class='gsyf_4_2' data-type="goodsWeight" bindinput='input' bindblur='inputBlur' value='{{goodsInfo.goodsWeight}}' type='text' placeholder='请输入物品重量' />
+        </add-subtrack-wrap>
+        <view class='gsyf_4_4'>公斤</view>
+      </view>
+      <view class='gsyf_4'>
+        <view class='gsyf_4_1'>
+          <text class='xicn'>*</text>总体积</view>
+        <add-subtrack-wrap bindcomChangeData="comChangeData" prop-key="goodsInfo.goodsVolume" prop-initial="{{goodsInfo.goodsVolume}}">
+          <input maxlength="8" class='gsyf_4_2' data-type="goodsVolume" bindinput='input' bindblur='inputBlur' value='{{goodsInfo.goodsVolume}}' type='text' placeholder='请输入货物体积' />
+        </add-subtrack-wrap>
+        <view class='gsyf_4_4'>立方</view>
+      </view>
+      <view class='gsyf_4'>
+        <view class='gsyf_4_1'>
+          <text class='xicn'>*</text>总件数</view>
+        <add-subtrack-wrap bindcomChangeData="comChangeData" prop-key="goodsInfo.goodsNumber" prop-initial="{{goodsInfo.goodsNumber}}">
+          <input maxlength="9" data-type="goodsNumber" bindinput='input' bindblur='inputBlur' value='{{goodsInfo.goodsNumber}}' class='gsyf_4_2' type='text' placeholder='请输入货物数量' />
+        </add-subtrack-wrap>
+        <view class='gsyf_4_4'>件</view>
+      </view>
+      <!-- 实际货物金额 -->
+      <view class='gsyf_4'>
+        <view class='gsyf_4_1'>
+          <text class='xicn'>*</text>货物金额</view>
+        <view style='width:404rpx;text-align:center;display:flex;justify-content:center;'>
+          <input maxlength="12" data-type="goodsAmount" bindinput='input' bindblur='inputBlur' value='{{goodsInfo.goodsAmount}}' class='gsyf_4_2' type='text' placeholder='请输入货物价格' />
+        </view>
+        <view class='gsyf_4_4'> 元</view>
+      </view>
+    </view>
+  </view>
+  <!-- 11111 -->
+
+  <!-- 11111 -->
+  <view class='ksxd_1' wx:if="{{recommendLogistics.length !== 0}}">
+    <view class='ksxd_box1'>
+      <view class='ksxd_box1_1'>承运方</view>
+    </view>
+    <view style='font-size:30rpx;' wx:if="{{recommendLogistics.length > 1}}" class='ksxd_2'>为您优选以下方案</view>
+    <radio-group bindchange="radioChange">
+      <!-- 为你优选 -->
+      <radio style='background:#fcf3ab;' value="{{index}}" checked="{{item.checked}}" class='searchList' wx:for="{{recommendLogistics}}" wx:if="{{index > 1 && item}}" wx:key="{{index}}">
+        <view class='searchList-wrap'>
+          <view class='searchList-image-wrap'>
+            <image class='searchList-image' src='{{item.ct || "https://style.org.hc360.com/images/microMall/program/proGimg.png"}}'></image>
+          </view>
+          <view class='searchList-content'>
+            <view style='display:flex;align-items:center;'>
+              <text class='comName'>{{item.cb}} </text>
+              <view class='listTop'>
+                <image src='../../image/you.png' class='optimization' />
+                <!-- <view wx:if="{{cleanFreightArr[index] > 0}}" style='font-size: 22rpx;margin-left:20rpx;color:red;'>为你节省¥ {{cleanFreightArr[index]}}</view> -->
+                <view class='choose' style='font-size: 22rpx;margin-left:20rpx; color:red;padding-right: 10rpx;'>优选推荐</view>
+              </view>
+            </view>
+            <view wx:if="{{cleanFreightArr[index] > 0}}" style='font-size: 22rpx;color:red;'>为你节省¥ {{cleanFreightArr[index]}}</view>
+            <view class='yx_box3_2'>重货：
+              <text class='color_1'>{{item.heavyPrice || ''}}</text>
+              <text class='color_2'>元</text>/公斤
+              <text class='color_2'>{{item.heavySale || ''}}</text>
+              <text wx:if="{{item.tm && item.heavySale}}" class='del_1'>{{item.tm || ''}}元/公斤)</text>
+            </view>
+            <view class='yx_box3_2'>轻货：
+              <text class='color_1'>{{item.lightPrice || ''}}</text>
+              <text class='color_2'>元</text>/立方
+              <text class='color_2'>{{item.lightSale || ''}}</text>
+              <text wx:if="{{item.up && item.lightSale}}" class='del_1'>{{item.up || ''}}元/立方)</text>
+            </view>
+            <view class='yx_box3_2'>
+              <text class='yx_box3_2'>时效：{{item.jy || ''}} {{item.vu || ''}}</text>
+              <text space="emsp" class='yx_box3_2'> 最低一票：{{item.et || ''}}元</text>
+            </view>
+            <view class='yx_box3_3'>
+              <view wx:for="{{item.serviceList}}" wx:for-index="idx" wx:for-item="ite" wx:key="{{idx}}" class='mf_1'>{{serverDictionary[ite]}}</view>
+            </view>
+            <view class='yx_box3_3'>
+              <view wx:if="{{item.cz}}" class='discountCon'>{{item.cz || ''}}</view>
+            </view>
+          </view>
+        </view>
+      </radio>
+      <!-- 其他推荐 -->
+      <view style='font-size:30rpx;color:black;' wx:if="{{recommendLogistics[0]}}" class='ksxd_2'>其他方案</view>
+      <radio wx:if="{{index < 2 && item}}" value="{{index}}" checked="{{item.checked}}" class='searchList' wx:for="{{recommendLogistics}}" wx:key="{{index}}" style='background:#eee;'>
+        <view class='searchList-wrap' style='width: 700rpx;'>
+          <view class='searchList-image-wrap'>
+            <image class='searchList-image' src='{{item.ct || "https://style.org.hc360.com/images/microMall/program/proGimg.png"}}'></image>
+          </view>
+          <view class='searchList-content' style='width: calc(100% - 240rpx);'>
+            <view style='display:flex;align-items:center;'>
+              <text class='comName'>{{item.cb}} </text>
+              <view class='listTop' style='flex-direction: row-reverse;'>
+                <view wx:if="{{item.checked}}" class='choose' style='font-size: 22rpx;margin-left:20rpx; color:red;padding-right: 10rpx;color:#4090ef;'>当前选择</view>
+              </view>
+            </view>
+            <view class='yx_box3_2'>重货：
+              <text class='color_1'>{{item.heavyPrice || ''}}</text>
+              <text class='color_2'>元</text>/公斤
+              <text class='color_2'>{{item.heavySale || ''}}</text>
+              <text wx:if="{{item.tm && item.heavySale}}" class='del_1'>{{item.tm || ''}}元/公斤)</text>
+            </view>
+            <view class='yx_box3_2'>轻货：
+              <text class='color_1'>{{item.lightPrice || ''}}</text>
+              <text class='color_2'>元</text>/立方
+              <text class='color_2'>{{item.lightSale || ''}}</text>
+              <text wx:if="{{item.up && item.lightSale}}" class='del_1'>{{item.up || ''}}元/立方)</text>
+            </view>
+            <view class='yx_box3_2'>
+              <text class='yx_box3_2'>时效：{{item.jy || ''}} {{item.vu || ''}}</text>
+              <text space="emsp" class='yx_box3_2'> 最低一票：{{item.et || ''}}元</text>
+            </view>
+            <view class='yx_box3_3'>
+              <view wx:for="{{item.serviceList}}" wx:for-index="idx" wx:for-item="ite" wx:key="{{idx}}" class='mf_1'>{{serverDictionary[ite]}}</view>
+            </view>
+            <view class='yx_box3_3'>
+              <view wx:if="{{item.cz}}" class='discountCon'>{{item.cz || ''}}</view>
+            </view>
+          </view>
+        </view>
+      </radio>
+    </radio-group>
+    <!-- 查询物流商总数 -->
+    <view wx:if="{{lineCollect.logisticNum || lineCollect.lineNum}}" class='ckqb_wl'>
+      <view class='ckqb_1'>显示
+        <text class='color_1'>2条</text>，共找到
+        <text class='color_1'>{{lineCollect.logisticNum || 0 }}个</text>物流商，
+        <text class='color_1'>{{lineCollect.lineNum || 0}}条</text>线路。</view>
+      <view bindtap='chooseLogistics' class='ckqb_2'>查看全部物流 ></view>
+    </view>
+    <!-- 增值服务 -->
+    <view bindtap='toChooseServer' class='gsyf_4' style='border-top: 1px solid #eee;'>
+      <view class='gsyf_4_1'>
+        <text class='xicn'>*</text>增值服务</view>
+      <text style='font-size:26rpx;' class='gsyf_4_2_1'>{{chooseServer && chooseServer.serverInfo['9'] && chooseServer.serverInfo['9'].resultPrice ? '保价费用 ' + chooseServer.serverInfo['9'].resultPrice : '是否上门接货、货物保价等服务'}}</text>
+    </view>
+    <!-- 短信服务 -->
+    <!-- <view wx:if="{{chooseServer.serverInfo['13']}}" class='fwyq_1'>
+      <view>短信通知收货人</view>
+      <switch class='sw_btn1' checked='{{chooseServer.serverInfo["13"].flag}}' bindchange="switchChagne" />
+    </view> -->
+    <!-- 支付方式 -->
+    <picker class='branch' bindchange="bindPickerChange" value="{{paymentType}}" range="{{paymentArray}}">
+      <view class='branch_1'>
+        <text class='xicn'>*</text>运费支付方式</view>
+      <text class='branch_2_1'>{{paymentArray[paymentType]}}{{serverInfo['12'].displayValue || ''}} </text>
+    </picker>
+    <!-- 备注 -->
+    <view style='justify-content:start;' class='gsyf_4'>
+      <view class='gsyf_4_1_2'>备注</view>
+      <input bindinput='input' data-type="remark" bindblur='inputBlur' class='gsyf_4_2s_1' type='text' placeholder='请输入备注信息' />
+    </view>
+  </view>
+
+  <!-- 网点信息 -->
+  <view class='p20'>
+    <view class='b_r_1'>
+      <view class='ksxd_box2_wd'>网点信息</view>
+      <picker class='branch' data-type="send" bindchange="chooseSendBranch" value="{{sendBranchType}}" range="{{sendBranchArray}}" range-key="name">
+        <view class='branch-info'>
+          <view class='branch-info-1'>发货网点</view>
+          <view class='branch-info-2'>{{sendBranchArray[sendBranchType].name}}</view>
+          <view class='branch-info-3'>{{sendBranchArray[sendBranchType].distanceStr || ''}} ></view>
+          <view data-phone="{{sendBranchArray[sendBranchType].mobile || sendBranchArray[sendBranchType].telephone}}" catchtap='callPhone' wx:if="{{sendBranchArray[sendBranchType].name}}" class='branch-info-4'></view>
+        </view>
+      </picker>
+      <picker data-type="recieve" class='branch' bindchange="chooseSendBranch" value="{{recieveBranchType}}" range="{{recieveBranchArray}}" range-key="name">
+        <view class='branch-info'>
+          <view class='branch-info-1'>收货网点</view>
+          <view class='branch-info-2'>{{recieveBranchArray[recieveBranchType].name}}</view>
+          <view class='branch-info-3'>{{recieveBranchArray[recieveBranchType].distanceStr || ''}} ></view>
+          <view data-phone="{{recieveBranchArray[recieveBranchType].mobile || recieveBranchArray[recieveBranchType].telephone}}" catchtap='callPhone' wx:if="{{recieveBranchArray[recieveBranchType].name}}" class='branch-info-4'></view>
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class='ksxd_box2'>
+    <view class='ksxd_box2_1'>费用估算</view>
+    <view class='ksxd_box2_2'>
+      <view class='ksxd_box2_01'>纯运费</view>
+      <view class='ksxd_box2_03'>￥{{costBreakdown.startTotalPrices}}</view>
+      <view style='float:right;font-size:28rpx;color:#666;padding:0 50rpx 0 10rpx' wx:if="{{costBreakdown.oldStartTotalPrices > costBreakdown.startTotalPrices}}">{{costBreakdown.discount.discountCoupon ? '(' + costBreakdown.discount.discountCoupon + '折' : logistics.heavySale || ''}})</view>
+      <view style='padding: 0 10rpx;' wx:if="{{costBreakdown.oldStartTotalPrices > costBreakdown.startTotalPrices}}" class='ksxd_box2_02'>￥{{costBreakdown.oldStartTotalPrices}}</view>
+    </view>
+    <view wx:if="{{item.title}}" wx:for="{{costBreakdown.basicTotalPrices.detail}}" wx:key="{{index}}" class='ksxd_box2_2'>
+      <view class='ksxd_box2_01'>{{item.title}}:</view>
+      <view class='ksxd_box2_04'>￥{{item.text}}</view>
+    </view>
+    <!-- <view class='priceDetail'>
+      <view class='priceDetailItem' wx:if="{{item.title}}" wx:for="{{costBreakdown.basicTotalPrices.detail}}" wx:key="{{index}}">{{item.title}}:
+        <view style='color:#fd473c;'>{{item.text}}</view>
+      </view>
+    </view> -->
+
+    <!-- <view class='ksxd_box2_2'>
+      <view class='ksxd_box2_01'>附加费用</view>
+      <view class='ksxd_box2_04'>￥{{costBreakdown.additionTotalPrices.price}}</view>
+    </view> -->
+    <view wx:if="{{item.text}}" wx:for="{{costBreakdown.additionTotalPrices.detail}}" wx:key="{{index}}" class='ksxd_box2_2'>
+      <view class='ksxd_box2_01'>{{item.title}}:</view>
+      <view class='ksxd_box2_04'>¥ {{item.text}}</view>
+    </view>
+    <!-- <view class='priceDetail'>
+      <view class='priceDetailItem' wx:if="{{item.text}}" wx:for="{{costBreakdown.additionTotalPrices.detail}}" wx:key="{{index}}">{{item.title}}:
+        <view>{{item.text}}</view>
+      </view>
+    </view> -->
+    <!-- <view bindtap='sidebarCallback' class='ksxd_box2_2'>
+      <view class='ksxd_box2_01'>优惠券抵用</view>
+      <view class='ksxd_box2_03'>-￥{{costBreakdown.oldStartTotalPrices - costBreakdown.startTotalPrices}}</view>
+    </view> -->
+    <view bindtap='sidebarCallback' class='ksxd_box2_4'>
+      <view class='ksxd_box4_left'>
+        优惠券
+        <text wx:if="{{costBreakdown.discount.discountId}}" class='ksxd_box4_nom'>已选1张</text>
+      </view>
+      <view wx:if="{{costBreakdown.discount.discountId}}" class='ksxd_box4_right'>-￥{{costBreakdown.discount.discountPrice || 0}}</view>
+      <view class='ksxd_box4_right' wx:else>{{chooseServer.wlDiscountNum || 0}}张可用</view>
+    </view>
+  </view>
+</view>
+
+<view style='position: fixed;bottom: 0;width:100%;background: white;z-index: 999;'>
+  <view hidden='{{addressThinkShowStatus}}' class='ksxd_fy_1'>
+    <view style='display:flex;flex-direction:column;height:100%;justify-content:space-around'>
+      <view class='ksxd_box2_3' style='display: flex;align-items: center;line-height:0;'>
+        <view style='display:flex;flex-direction:column;height:100%;justify-content:space-around'>
+          <view>预估总金额：</view>
+          <!-- <view style='font-size: 24rpx;'>优惠：￥{{costBreakdown.discount.discountId ?(costBreakdown.oldStartTotalPrices - costBreakdown.startTotalPrices) : 0}}</view> -->
+        </view>
+        <view class='ksxd_box2_03'>￥{{costBreakdown.totalPrice}}</view>
+      </view>
+      <view style='font-size: 28rpx;padding-left:20rpx;'>优惠：￥{{costBreakdown.discount.discountPrice|| 0}}</view>
+    </view>
+    <form style='margin:0 0 0 10rpx;flex:1 1 auto;max-width: 250rpx;' report-submit='true' bindsubmit="confirmOrder">
+      <button class='ksxd_qr' formType="submit">提交订单</button>
+    </form>
+  </view>
+</view>
+
+<!-- 提交订单信息确认弹框 -->
+<modal title="订单信息确认" hidden="{{hiddenmodalput}}" style="width: 100%;height: 100%; z-index:99998;" confirm-text="确认提交" cancel-text="返回修改" bindcancel="modalCancel" bindconfirm="modalConfirm">
+  <view style='display:flex;margin-top: 10rpx;border-top:1px solid #eee;'>
+    <view class='ddqr_text'>您选择的物流商:</view>
+    <view class='ddqr_text'>{{logistics.cb}}</view>
+  </view>
+  <view style='display:flex;margin-top: 10rpx;'>
+    <view style='flex-grow:0;min-width:80rpx;max-width: 80rpx;' class='ddqr_text'>线路:</view>
+    <view>
+      <view style='' class='ddqr_text'>{{addressList[0].area}} 到</view>
+      <view style='' class='ddqr_text'>{{addressList[1].area}}</view>
+    </view>
+  </view>
+  <view style='display:flex;margin-top: 10rpx;'>
+    <view style='flex-grow:0;min-width:80rpx;max-width: 80rpx;' class='ddqr_text'>物品:</view>
+    <view style='width:calc(100% - 80rpx);'>
+      <view class='ddqr_text'>{{goodsInfo.goodsName}}</view>
+      <view style='display:flex;align-items:center;'>
+        <view class='color_qr'>{{goodsInfo.goodsWeight ? goodsInfo.goodsWeight + "公斤" : ''}}</view>
+        <view class='color_qr'>{{goodsInfo.goodsVolume ? goodsInfo.goodsVolume + "立方" : ''}}</view>
+        <!-- 折扣 -->
+        <view wx:if="{{costBreakdown.discount.discountCoupon}}" class='color_qr'>({{costBreakdown.discount.discountCoupon}})折</view>
+        <view wx:elif="{{logistics.heavySale}}" class='color_qr'>{{logistics.heavySale}})</view>
+      </view>
+    </view>
+  </view>
+  <view style='display:flex;margin-top: 10rpx;align-items:center;'>
+    <view class='ddqr_text'>预计总金额: </view>
+    <view class='color_qr'>{{costBreakdown.totalPrice}}元</view>
+  </view>
+</modal>
+
+<sidebar bindsidebarCallback="sidebarCallback" prop-cssType="bottom" prop-showSidebarFlag="{{showSidebarFlag}}">
+  <view style='width: 100%;text-align: center;line-height: 80rpx'>优惠券</view>
+  <scroll-view scroll-into-view="{{}}" enable-back-to-top style="height: calc(100% - 160rpx);background: #eee;" scroll-y>
+    <radio-group bindchange="radioChangeD" style='padding: 0 20rpx 20rpx;'>
+      <block wx:if="{{chooseServer && chooseServer.wlDiscountList && chooseServer.wlDiscountList.length !== 0}}">
+        <radio style='width:100%;' value=''>
+          <view class='yhj_box' style='width:650rpx;justify-content:center;height:80rpx;margin-top:20rpx;'>
+            <view style='color:#aaa;font-size:34rpx;'>不使用优惠券</view>
+          </view>
+        </radio>
+        <radio checked="{{item.checked}}" value='{{index}}' style='width:100%;' wx:for="{{chooseServer.wlDiscountList}}" wx:key="{{index}}">
+          <view class='yhj_box' style='width:650rpx;'>
+            <view class='yhj_left'>
+              <view class='zk_num1'>{{item.discount || ''}}折优惠券</view>
+            </view>
+            <view class='yhj_right' style='width:auto;'>
+              <view class='yhj_right1'>
+                <view class='yhj_right1_1'>已用：{{item.useNumber || 0}}次</view>
+                <view class='yhj_right1_1'>未用：{{item.noUsedNumber || 0}}次</view>
+              </view>
+              <view class='yhj_right2'>{{item.beginTime}}-{{item.endTime}}</view>
+              <view class='yhj_right3'>
+                <view class='yhj_right3_1'>限{{item.logisticName || ''}}物流使用</view>
+              </view>
+            </view>
+          </view>
+        </radio>
+      </block>
+      <view style='text-align:center;padding:40rpx;font-size:32rpx;color:#999;' wx:else>没有{{reselist[currentIndex].title}}优惠券</view>
+    </radio-group>
+    <cover-view style='position:fixed;bottom:0;left:0;right:0;z-index: 9999;'>
+      <button bindtap='sidebarCallback' hidden='{{showSidebarFlag}}' style='background:#fd473c;color:white;'>关闭</button>
+    </cover-view>
+  </scroll-view>
+</sidebar>

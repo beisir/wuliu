@@ -1,0 +1,53 @@
+<!--pages/xsth/xsth.wxml-->
+<view class='pb20'>
+  <view class='p20'>
+    <view class='xsth_1'>
+      <image class='xsth_2' src='https://img007.hc360.cn/k3/M0E/7C/E7/0a3ba420160aaFb78C6aCb38FbF82Fa2Fb.jpg'></image>
+    </view>
+  </view>
+
+  <view class='p20'>
+    <view class='b_r_1'>
+      <view class='xsth_box'>
+        <view class='xsth_4'>
+            <span style='font-weight:bold;'>活动主题：</span>
+            <span style='font-weight:bold;'>酷暑来袭，冰点惠价</span>
+        </view>
+        <view class='xsth_4'>
+            <span style='font-weight:bold;'>活动时间：</span>
+            <span style='font-weight:bold;'>2019年7月1日-7月31日</span>
+        </view>
+         <view class='xsth_4'>
+            <span style='font-weight:bold;'>活动对象：</span>
+            <span style='font-weight:bold;'>通过慧聪物流平台下单的客户</span>
+        </view>
+        
+       
+        <view class='xsth_4' style='font-weight:bold;'>活动内容：</view>
+        
+        <view class='xsth_4'>
+          
+          <span>商桥物流，清凉一夏，优惠不停
+<span style='text-align:center;color:red;font-weight:bold;'>全线纯运费享9.0折</span></span>
+          
+        </view>
+
+        <view class='xsth_4' style='font-weight:bold;'>活动细则：</view>
+        <view class='xsth_4'>
+          
+          <span>活动折扣限纯运费，ZD一票除外；</span>
+          
+        </view>
+        
+        <view class='xsth_4' style='font-weight:bold;' >特别说明：</view>
+        <view class='xsth_4'>1、慧聪客户折扣适用于商桥物流加盟网点及直营门店；</view>
+        <view class='xsth_4'>2、此优惠不与商桥其他优惠同时享受（签约客户以协议价格为准，不参与此活动）；</view>
+        <view class='xsth_4'>3、如有疑问，可致电商桥物流客服热线4008-518-666或咨询当地门店;</view>
+        <view class='xsth_4'>4、在法律范围内，商桥物流对此活动保留最终解释权。</view>
+      
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='xsth_tj' bindtap='toNavigate'>立即下单</view>

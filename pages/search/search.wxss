@@ -1,0 +1,12 @@
+/* pages/search/search.wxss */
+page{background:#f7f7f7;}
+view,input{box-sizing:border-box;}
+.topSearch{height:100rpx; border-bottom: 2px solid #f5f5f5;}
+.searchCon{padding:20rpx; position: relative;}
+.searchCon input{ background:#eee;font-size:30rpx;height:66rpx; border-radius: 30rpx; line-height: 66rpx; border: none;width:calc(100% - 90rpx);padding-left:60rpx; text-align:center;}
+.searchCon:before{ content:""; display: block; position: absolute; top: 24rpx;left:40rpx; height: 66rpx; width: 66rpx; background:url(https://style.org.hc360.com/images/logistics/s-program/wlIco.png) 12rpx 15rpx no-repeat; background-size: 300rpx 600rpx;}
+.cancelBtn{ position: absolute; right: 0; font-size:30rpx;color:#333; line-height:66rpx;top:20rpx; height: 100rpx; text-align: center; width: 110rpx;}
+.seaHistory{ overflow: hidden; padding:15rpx 20rpx;}
+.seaHistory text{ font-size: 34rpx; color: #333; line-height: 82rpx; padding-bottom: 5rpx; display: block;}
+.seaWord{ float: left; margin: 0 20rpx 20rpx 0;padding:0 30rpx; height:60rpx; line-height: 60rpx; font-size: 28rpx; color: #333; background: #e5e5e5; border-radius: 50rpx;}
+

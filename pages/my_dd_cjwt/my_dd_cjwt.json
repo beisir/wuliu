@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "tab-nav": "../../components/tabNav/tabNav",
+    "tab-item": "../../components/tabItem/tabItem"
+  }
+}

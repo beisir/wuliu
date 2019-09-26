@@ -1,0 +1,41 @@
+<!--pages/my_dd_fhxl2/my_dd_fhxl2.wxml-->
+<view class='topSearch'>
+  <view class='searchCon'><input placeholder-class="phcolor" type='text' placeholder='北京  上海  线路' /><icon class='yuyinIco'></icon></view>
+</view>
+
+<view class='fhxl_1'>
+ <view class='fhxl_1_1'>近一个月的</view>
+ <view class='fhxl_1_2'>全部</view>
+
+         <view class='sflx_2'>
+          <view class='li_1'>
+            <view class='li_1_left_1'>未受理</view>
+          </view>
+            <view class='li_1'>
+              <view class='li_1_left'>已受理</view>
+          </view>
+            <view class='li_1'>
+              <view class='li_1_left'>已撤销</view>
+          </view>
+            <view class='li_1'>
+              <view class='li_1_left'>不受理</view>
+          </view>
+            <view class='li_1'>
+              <view class='li_1_left'>运输中</view>
+          </view>
+            <view class='li_1'>
+              <view class='li_1_left'>揽件失败</view>
+            </view>
+            <view class='li_1'>
+              <view class='li_1_left'>已签收</view>
+            </view>
+            <view class='li_1'>
+              <view class='li_1_left'>签收异常</view>
+            </view>
+            <view class='li_1'>
+              <view class='li_1_left'>已撤销已处理</view>
+            </view>
+       </view>
+</view>
+
+

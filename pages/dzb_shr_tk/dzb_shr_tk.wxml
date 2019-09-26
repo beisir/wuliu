@@ -1,0 +1,46 @@
+<!--index.wxml-->
+<view class='shr_1'>
+     <view class='shr_nav_2'>收货人地址</view>
+     <view class='shr_nav_1'>发货人地址</view>
+</view>
+<view class='p20'>
+  <view class='shr_list'>
+           <view class='shr_list_1'>
+                   <text class='shr_mz'>王文轩18511898060</text>
+                   <view class='shr_bj'>编辑</view>
+                   <view class='shr_cs'>删除</view>
+           </view>
+           <text class='shr_dz'>山东省青岛市西路路23号建文大厦1201</text>
+           <view class='ck_fh'>
+              <view class='fh_1'>发货</view>
+              <view class='ck_1'>查看发货记录</view>
+                  
+           </view>
+  </view>
+  <view class='shr_list'>
+           <view class='shr_list_1'>
+                   <text class='shr_mz'>王文轩18511898060</text>
+                   <view class='shr_bj'>编辑</view>
+                   <view class='shr_cs'>删除</view>
+           </view>
+           <text class='shr_dz'>山东省青岛市西路路23号建文大厦1201</text>
+           <view class='ck_fh'>
+              <view class='fh_1'>发货</view>
+              <view class='ck_1'>查看发货记录</view>
+                  
+           </view>
+  </view>
+</view>
+
+<view class='bc_btn_1'>
+        <view class='xz_shr'>新增收货人</view>
+</view>
+
+<view class='tk_bj'></view>
+<view class='tk_box1'>
+       <view class='qr_sc'>确认删除此地址？</view>
+       <view class='btn_qx_sc'>
+          <view class='btn_qx_sc_1'>取消</view>
+          <view class='btn_qx_sc_2'>删除</view>
+       </view>
+</view>

@@ -1,0 +1,215 @@
+/* pages/wdcx/wdcx.wxss */
+
+page {
+  background: url(https://style.org.hc360.com/images/logistics/s-program/mapImg.jpg);
+  background-size: cover;
+}
+
+.wdcx_1 {
+  margin: 20rpx;
+  background: #fff;
+  border-radius: 15rpx;
+  position: relative;
+  padding: 0 20rpx;
+}
+
+.wdcx_box1 {
+  font-size: 34rpx;
+  color: #333;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding-top: 10rpx;
+  position: relative;
+}
+
+.wdcx_box2 {
+  font-size: 26rpx;
+  color: #666;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding-top: 10rpx;
+  position: relative;
+}
+
+.wdcx_box1::after {
+  content: '';
+  position: absolute;
+  top: 8rpx;
+  right: 0rpx;
+  display: block;
+  background: url(https://style.org.hc360.com/images/logistics/s-program/ico49.png) no-repeat;
+  width: 50rpx;
+  height: 60rpx;
+  background-size: 50rpx 60rpx;
+  float: right;
+}
+
+.wdcx_box2::after {
+  content: '';
+  position: absolute;
+  top: 8rpx;
+  right: 0rpx;
+  display: block;
+  background: url(https://style.org.hc360.com/images/logistics/s-program/ico48.png) no-repeat;
+  width: 50rpx;
+  height: 60rpx;
+  background-size: 50rpx 60rpx;
+  float: right;
+}
+
+.fhbox_7 {
+  clear: both;
+  position: relative;
+  left: 150rpx;
+  top: 500rpx;
+}
+
+.fhbox_7_1 {
+  clear: both;
+  height: 54rpx;
+  line-height: 54rpx;
+  position: relative;
+  left: 140rpx;
+}
+
+.fhbox_7_2 {
+  font-size: 24rpx;
+  color: #ff6f66;
+  float: left;
+}
+
+.fhbox_7_1::after {
+  content: '';
+  position: absolute;
+  top: 0rpx;
+  left: -50rpx;
+  display: block;
+  background: url(https://style.org.hc360.com/images/logistics/s-program/ico45.png) no-repeat;
+  width: 50rpx;
+  height: 60rpx;
+  background-size: 50rpx 60rpx;
+  float: left;
+}
+
+.fhbox_7_3 {
+  float: left;
+  width: 60rpx;
+  position: relative;
+}
+
+.fhbox_7_3::after {
+  content: '';
+  position: absolute;
+  top: 0rpx;
+  right: -70rpx;
+  display: block;
+  background: url(https://style.org.hc360.com/images/logistics/s-program/ico44.png) no-repeat;
+  width: 50rpx;
+  height: 60rpx;
+  background-size: 50rpx 60rpx;
+  float: left;
+}
+
+.fahuo_cd {
+  clear: both;
+  width: 520rpx;
+  height: 190rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  margin-top: 70rpx;
+  position: relative;
+}
+
+.fahuo_cd_1 {
+  clear: both;
+  width: 100%;
+  padding: 20rpx;
+}
+
+.fahuo_box1 {
+  font-size: 26rpx;
+  color: #333;
+  float: left;
+}
+
+.fahuo_box2 {
+  font-size: 26rpx;
+  color: #5803ac;
+  float: left;
+  height: 30rpx;
+  border: 1px #5803ac solid;
+  text-align: center;
+  line-height: 30rpx;
+  float: left;
+  border-radius: 20rpx;
+  padding: 0 20rpx;
+  margin-left: 20rpx;
+}
+
+.fahuo_cd_2 {
+  clear: both;
+  font-size: 24rpx;
+  color: #666;
+  padding: 20rpx;
+}
+
+.fahuo_cd_3 {
+  clear: both;
+  font-size: 24rpx;
+  color: #666;
+  padding: 0 20rpx;
+}
+
+.fahuo_box4 {
+  float: left;
+  font-size: 24rpx;
+  color: #666;
+}
+
+.fahuo_box5 {
+  float: left;
+  font-size: 24rpx;
+  color: #666;
+}
+
+.fahuo_cd_4 {
+  background: url(https://style.org.hc360.com/images/logistics/s-program/ico47.png) no-repeat;
+  width: 78rpx;
+  height: 78rpx;
+  background-size: 78rpx 78rpx;
+  text-align: center;
+  line-height: 78rpx;
+  color: #fff;
+  font-size: 24rpx;
+  position: absolute;
+  right: 0;
+  bottom: -20rpx;
+  cursor: pointer;
+}
+
+.screeningTop {
+  background: #fff;
+  border-radius: 10rpx;
+  padding: 20rpx 25rpx;
+  font-size: 30rpx;
+  color: #333;
+  border-bottom: 1px solid #eee;
+}
+
+.screeningTop text {
+  display: block;
+  line-height: 72rpx;
+}
+
+/* .screeningTop::after{ content:''; position: absolute; top:8rpx; right:0rpx; display: block; background:url(https://style.org.hc360.com/images/logistics/s-program/ico49.png) no-repeat; width: 50rpx; height: 60rpx; background-size: 50rpx 60rpx; float: right;} */
+
+.fahuo_box3 {
+  width: 70rpx;
+  height: 70rpx;
+  position: absolute;
+  right: 0rpx;
+  top: 0rpx;
+  background: #eee;
+  border-radius: 0 0 0 100%;
+  text-align: right;
+}

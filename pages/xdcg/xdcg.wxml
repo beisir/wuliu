@@ -1,0 +1,9 @@
+<!--pages/xdcg/xdcg.wxml-->
+<view class='xdcg_1'></view>
+<view class='xdcg_2'>订单编号:{{orderInfo.code}}</view>
+<view class='xdcg_2'>物流公司将在2小时内和您取得联系请保持电话畅通</view>
+<view class='xdcg_2'>{{orderInfo.logisticsName}}  咨询电话{{orderInfo.phone}}</view>
+<view class='xdcg_3'>
+ <navigator url='../ddxq/ddxq?orderId={{orderInfo.orderId}}&title=订单详情' class='xdcg_3_1'>查看订单</navigator> 
+ <navigator url='../ksxd/ksxd' open-type='redirect' class='xdcg_3_2'>继续发货</navigator> 
+</view>

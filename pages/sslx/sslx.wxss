@@ -1,0 +1,595 @@
+/* pages/favorites/favorites.wxss */
+
+page {
+  background: #f7f7f7;
+}
+
+.searchWrap {
+  background: #fff;
+  height: 80rpx;
+  padding: 20rpx;
+}
+
+.searchInput {
+  position: relative;
+  height: 80rpx;
+}
+
+.searchInput view {
+  background: #eee;
+  font-size: 28rpx;
+  height: 66rpx;
+  border-radius: 33rpx;
+  line-height: 66rpx;
+  border: none;
+  text-align: center;
+  color: #666;
+}
+
+.searchInput:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 4rpx;
+  left: 20rpx;
+  height: 60rpx;
+  width: 60rpx;
+  background: url(https://style.org.hc360.com/images/logistics/s-program/wlIco.png) 10rpx 17rpx no-repeat;
+  background-size: 300rpx 600rpx;
+}
+
+.searchList {
+  margin: 20rpx 20rpx 0;
+  background: #fff;
+  padding: 0 20rpx;
+  overflow: hidden;
+}
+
+.listTop {
+  font-size: 28rpx;
+  color: #333;
+  padding: 5rpx 0;
+  display: flex;
+  align-items: center;
+}
+
+.listTop .comName {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.listTop .kmNum {
+  float: right;
+  display: block;
+  width: 52rpx;
+  height: 52rpx;
+  margin-right: 6rpx;
+  background: url(https://style.org.hc360.com/images/logistics/s-program/wlIco2.png) no-repeat 0 -400rpx;
+  background-size: 300rpx 600rpx;
+  margin-top: 20rpx;
+  cursor: pointer;
+}
+
+/*cyf*/
+
+.ksxd_3c {
+  color: #fd473c;
+  display: inline;
+}
+
+.cyf {
+  clear: both;
+  overflow: hidden;
+  padding: 20rpx 0;
+}
+
+.cyf_1 {
+  line-height: 50rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.cyf_left_1 {
+  font-size: 26rpx;
+  color: #333;
+}
+
+.cyf_left_2 {
+  font-size: 26rpx;
+  color: #333;
+}
+
+.discountCon {
+  font-size: 22rpx;
+  background-image: -webkit-linear-gradient(left, #0303fd, #ff00ea);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-background-size: 200% 100%;
+  -webkit-animation: masked-animation 4s infinite linear;
+  border: 1px solid #0303fd;
+  border-radius: 8rpx;
+  text-align: center;
+  float: left;
+  padding: 0 15rpx;
+  margin-bottom: 8rpx;
+  line-height: 30rpx;
+}
+
+.ljxd {
+  clear: both;
+  padding-bottom: 16rpx;
+  overflow: hidden;
+  border-top: 1px #f7f7f7 solid;
+}
+
+.ksxd1 {
+  float: right;
+  background-image: -webkit-linear-gradient(90deg, #fd483d, #ff7068);
+  color: #fff;
+  width: 160rpx;
+  height: 60rpx;
+  font-size: 24rpx;
+  line-height: 60rpx;
+  margin-top: 10rpx;
+}
+
+.fhbox_6 {
+  height: 60rpx;
+  line-height: 60rpx;
+  margin: 20rpx;
+  background: #fff;
+  border-radius: 15rpx;
+  position: relative;
+  padding: 0 20rpx;
+}
+
+.fhbox_6_1 {
+  font-size: 22rpx;
+  color: #666;
+  height: 60rpx;
+  line-height: 60rpx;
+  position: relative;
+}
+
+.filtrate {
+  line-height: 60rpx;
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
+  border-bottom:1px #dcdcdc solid;
+}
+
+.logistic-group {
+  display: flex;
+  justify-content: space-betweenl;
+  flex-wrap: wrap;
+}
+
+.logistic-checkbox {
+  width: 50%;
+  font-size: 26rpx;
+  margin: 10rpx 0;
+}
+
+.fillate-wrap {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0);
+  position: fixed;
+  top: 0;
+  right: -100%;
+  bottom: 0;
+  z-index: 10000;
+  display: flex;
+  flex-direction: row-reverse;
+  transition: all 0.5s ease-in-out;
+}
+
+.fillate-content {
+  width: 80%;
+  height: 100%;
+  background: white;
+  position: relative;
+}
+
+.fillate-title {
+  color: #999;
+  font-size: 30rpx;
+}
+
+.fillate-items {
+  display: flex;
+  margin-top: 20rpx;
+  flex-wrap: wrap;
+}
+
+.fillate-item {
+  color: #666;
+  font-size: 24rpx;
+  padding: 10rpx 24rpx;
+  background: #eee;
+  border-radius: 40rpx;
+  margin:20rpx 10rpx;
+}
+
+.active {
+  color: #fff;
+  font-size: 24rpx;
+  padding: 10rpx 24rpx;
+  background: #e99191;
+  border-radius: 40rpx;
+  margin:20rpx 10rpx;
+}
+
+.fillate-button {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.fillate-button-btn {
+  width: calc(50% - 2px);
+  text-align: center;
+  display: inline-block;
+  padding: 20rpx 0;
+  border: 1px solid #eee;
+  font-size: 34rpx;
+  color: rgb(90, 90, 90);
+}
+
+.confirm {
+  background: #fd473c;
+  color: white;
+}
+
+.search-head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: #eee;
+}
+
+/*----0815-----  */
+
+/* pages/sslxcx/sslxcx.wxss */
+
+.sslx_top {
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-bottom: 1px #dcdcdc solid;
+}
+
+.sslx_1 {
+  width: 18%;
+  margin: 0 1%;
+  font-size: 26rpx;
+  color: #999;
+  float: left;
+  text-align: center;
+  position: relative;
+}
+
+.sslx_1_1 {
+  width: 18%;
+  margin: 0 1%;
+  font-size: 26rpx;
+  color: #999;
+  float: left;
+  text-align: center;
+}
+
+.sslx_1::after {
+  content: '';
+  position: absolute;
+  top: 22rpx;
+  right: 8rpx;
+  display: block;
+  background: url(https://style.org.hc360.com/images/logistics/s-program/ico63.png) no-repeat;
+  width: 20rpx;
+  height: 20rpx;
+  background-size: 20rpx 20rpx;
+  float: left;
+}
+
+.sslx_1s {
+  width: 18%;
+  margin: 0 1%;
+  font-size: 26rpx;
+  color: #ef3333;
+  float: left;
+  text-align: center;
+  position: relative;
+  border-bottom: 2px #ef3333 solid;
+}
+
+.sslx_1s_1 {
+  width: 18%;
+  margin: 0 1%;
+  font-size: 26rpx;
+  color: #ef3333;
+  float: left;
+  text-align: center;
+  border-bottom: 2px #ef3333 solid;
+}
+
+.sslx_1s::after {
+  content: '';
+  position: absolute;
+  top: 22rpx;
+  right: 8rpx;
+  display: block;
+  background: url(https://style.org.hc360.com/images/logistics/s-program/ico62.png) no-repeat;
+  width: 20rpx;
+  height: 20rpx;
+  background-size: 20rpx 20rpx;
+  float: left;
+}
+
+.sslx_0 {
+  width: 18%;
+  margin: 0 1%;
+  font-size: 26rpx;
+  color: #ef3333;
+  float: left;
+  text-align: center;
+  border-bottom: 2px #ef3333 solid;
+}
+
+.ckqb_wl {
+  clear: both;
+  height: 50rpx;
+  line-height: 50rpx;
+  padding: 16rpx 0;
+}
+
+.ckqb_1 {
+  font-size: 20rpx;
+  color: #666;
+  text-indent: 24rpx;
+}
+
+.color_1 {
+  font-size: 20rpx;
+  color: #fd473c;
+}
+
+.sslx_list {
+  border-radius: 10rpx;
+  width: 100%;
+  background: #fff;
+  clear: both;
+  padding: 20rpx 0;
+}
+
+.yxwl_2 {
+  border-bottom: 1px #f7f7f7 solid;
+  height: 220rpx;
+  position: relative;
+  clear: both;
+}
+
+.yxwl_2s {
+  border-bottom: 1px #f7f7f7 solid;
+  height: 220rpx;
+  position: relative;
+  clear: both;
+  background: #fbfbfb;
+}
+
+.yx_box1 {
+  float: left;
+  background: url(https://style.org.hc360.com/images/logistics/s-program/ico60.png) no-repeat;
+  width: 30rpx;
+  height: 30rpx;
+  background-size: 30rpx 30rpx;
+  margin: 90rpx 0 0 20rpx;
+}
+
+.yx_box1s {
+  float: left;
+  background: url(https://style.org.hc360.com/images/logistics/s-program/ico61.png) no-repeat;
+  width: 30rpx;
+  height: 30rpx;
+  background-size: 30rpx 30rpx;
+  margin: 90rpx 0 0 20rpx;
+}
+
+.yx_box2 {
+  width: 143rpx;
+  height: 143rpx;
+  float: left;
+  border: 1px #e7e7e7 solid;
+  margin: 36rpx 0 0 10rpx;
+}
+
+.wlimg {
+  width: 100%;
+  height: 143rpx;
+}
+
+.yx_box3 {
+  width: 188rpx;
+  float: left;
+  padding-top: 10rpx;
+  padding-left: 20rpx;
+}
+
+.yx_box3_1 {
+  font-size: 28rpx;
+  color: #333;
+  padding: 5rpx 0;
+  position: relative;
+}
+
+.yx_box3_1::after {
+  content: '';
+  position: absolute;
+  top: 12rpx;
+  left: 120rpx;
+  display: block;
+  background: url(https://style.org.hc360.com/images/logistics/s-program/ico59.png) no-repeat;
+  width: 18rpx;
+  height: 21rpx;
+  background-size: 18rpx 21rpx;
+  float: left;
+}
+
+.yx_box3_2 {
+  font-size: 22rpx;
+  color: #666;
+  padding: 5rpx 0;
+}
+
+.yx_box3_2s {
+  font-size: 22rpx;
+  color: #666;
+  padding: 5rpx 0;
+  margin-top: 9rpx;
+}
+
+.color_1 {
+  font-size: 26rpx;
+  color: #fd473c;
+}
+
+.color_2 {
+  font-size: 20rpx;
+  color: #fd473c;
+}
+
+.del_1 {
+  text-decoration: line-through;
+}
+
+.mf_1 {
+  text-align: center;
+  font-size: 20rpx;
+  color: #fd473c;
+  border: 1px #fd473c solid;
+  border-radius: 20rpx;
+  padding: 0 10rpx;
+  margin:5rpx 5rpx 5rpx 0;
+}
+
+.mf_2 {
+  color: #01c9e3;
+  border: 1px #01c9e3 solid;
+  border-radius: 20rpx;
+  text-align: center;
+  font-size: 20rpx;
+  padding: 0 10rpx;
+  margin:5rpx 5rpx 5rpx 0;
+}
+
+.mf_3 {
+  width: 186rpx;
+  height: 24rpx;
+  text-align: center;
+  line-height: 24rpx;
+  font-size: 20rpx;
+  color: #fd262e;
+  border: 1px #fd262e solid;
+  border-radius: 20rpx;
+  float: left;
+}
+
+.yx_box3_3 {
+  margin-top: 10rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.yx_box4 {
+  width: 188rpx;
+  float: left;
+  padding-top: 18rpx;
+}
+
+.yx_box4s {
+  width: 188rpx;
+  float: left;
+  padding-top: 60rpx;
+}
+
+.yx_box4_1 {
+  font-size: 20rpx;
+  color: #fd262e;
+  padding: 5rpx 0;
+  position: relative;
+  margin-bottom: 8rpx;
+}
+
+.yx_box5 {
+  width: 100rpx;
+  height: 24rpx;
+  background: #fd262e;
+  font-size: 20rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 24rpx;
+  border-radius: 20rpx;
+  position: absolute;
+  right: 20rpx;
+  top: 20rpx;
+}
+
+.yx_box5s {
+  width: 100rpx;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  color: #fff;
+  background: #fd4a3e;
+  font-size: 32rpx;
+  position: absolute;
+  right: 15rpx;
+  bottom: 12rpx;
+  border-radius: 10rpx;
+  cursor: pointer;
+}
+
+.sslx_0s {
+  width: 18%;
+  margin: 0 1%;
+  font-size: 26rpx;
+  color: #999;
+  float: left;
+  text-align: center;
+}
+
+.searchList-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top:10rpx;
+}
+
+.searchList-image-wrap {
+  width: 160rpx;
+  height: 160rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: 1px solid #eee;
+}
+
+.searchList-image {
+  width: 160rpx;
+  height: 60rpx;
+  border: 1px solid #eee;
+}
+
+.searchList-content {
+  width: calc(100% - 173rpx);
+}
+.optimization {
+  margin-left: 10rpx;
+  width: 35rpx;
+  height: 40rpx;
+}

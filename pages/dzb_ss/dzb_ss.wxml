@@ -1,0 +1,37 @@
+<!--pages/dzb_ss/dzb_ss.wxml-->
+<view class='p20'>
+  <view class='b_r'>
+    <view class='dzb_ss_1'>
+        搜索小区/学校/大厦
+    </view>
+    <text class='sjr_1'>收件人</text>
+  </view>
+</view>
+<view class='p20'>
+  <view class='b_r_1'>
+    <view class='sjr_dz_list'>
+      <view class='sjr_dz_list_1'>北京市丰台区</view>
+      <view class='sjr_dz_list_2'>搜索小区/学校/大厦</view>
+    </view>
+    <view class='sjr_dz_list'>
+      <view class='sjr_dz_list_1'>北京市丰台区</view>
+      <view class='sjr_dz_list_2'>搜索小区/学校/大厦</view>
+    </view>
+    <view class='sjr_dz_list'>
+      <view class='sjr_dz_list_1'>北京市丰台区</view>
+      <view class='sjr_dz_list_2'>搜索小区/学校/大厦</view>
+    </view>
+    <view class='sjr_dz_list'>
+      <view class='sjr_dz_list_1'>北京市丰台区</view>
+      <view class='sjr_dz_list_2'>搜索小区/学校/大厦</view>
+    </view>
+    <view class='sjr_dz_list'>
+      <view class='sjr_dz_list_1'>北京市丰台区</view>
+      <view class='sjr_dz_list_2'>搜索小区/学校/大厦</view>
+    </view>
+    <view class='sjr_dz_list'>
+      <view class='sjr_dz_list_1'>北京市丰台区</view>
+      <view class='sjr_dz_list_2'>搜索小区/学校/大厦</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<view class='shr_1'>
+  <tab-nav childrenLength="{{reselist.length}}" currentIndex="{{currentIndex}}">
+    <tab-item class="dzb_tab" itemHeight="92" style="" childrenLength="{{list.length}}" wx:for="{{reselist}}" wx:key="{{index}}" index="{{index}}" currentIndex="{{currentIndex}}" bindchangeIndex="changeCurrentIndex">
+      {{item.title}}
+    </tab-item>
+  </tab-nav>
+</view>
+<swiper style="height:{{currentIndex === 0 ? reselist[currentIndex].renderData.length * 264 + 180 : reselist[currentIndex].renderData.length * 320 + 180}}rpx;" current="{{currentIndex}}" bindchange="crrentChange" class='p20'>
+  <swiper-item wx:for="{{reselist}}" wx:key='index'>
+    <radio-group bindchange="radioChange">
+      <block wx:for='{{ reselist[currentIndex].renderData }}' wx:key='item.name'>
+        <view bindtap='chooseAddress' data-index="{{index}}" data-chooseAddress="{{item}}" bindchange="radioChange" class='shr_list'>
+          <view class='shr_list_1'>
+            <text class='shr_mz'>{{item.contacter + ' '}}</text>
+            <text style='color: rgb(30, 118, 253);margin-left: 20rpx;' bindtap='callPhone' data-phone="{{item.mobile}}"> {{item.mobile }}</text>
+            <view data-title="{{currentIndex === 0 ? '修改发货人' : '修改收货人'}}" data-path="dzb_xjshr" data-item="{{item}}" catchtap='navigateTo' class='shr_bj'>编辑</view>
+            <view class='shr_cs' data-item='{{ item }}' catchtap='showmo'>删除</view>
+          </view>
+          <text style='width:80%;' class='shr_dz'>{{item.area }}</text>
+          <text style='width:80%;' class='shr_dz'>{{item.address}}</text>
+          <block wx:if="{{ !(showSwiperIndex !== null) }}">
+            <view class='ck_fh' wx:if="{{currentIndex === 1}}">
+              <view catchtap='navigateTo' data-item="{{item}}" data-path="ksxd" data-title="发货" class='fh_1'>发货</view>
+              <view catchtap='navigateTo' data-item="{{item}}" data-path="my_dd_fhjl" data-title="查看记录" class='ck_1'>查看发货记录</view>
+            </view>
+            <!-- <view class='ck_fh' wx:else>
+              <radio value='{{item.addressId}}' checked="{{item.isDefault === '1'}}" class='radio'>设为默认地址</radio>
+            </view> -->
+          </block>
+        </view>
+      </block>
+    </radio-group>
+    <!-- <view wx:if="{{showFlag}}" style='text-align: center;color:#999;font-size:24rpx;line-height:80rpx;'>没有更多</view> -->
+  </swiper-item>
+</swiper>
+
+<view class='bc_btn_1'>
+  <view data-title="{{currentIndex === 0 ? '新增发货人' : '新增收货人'}}" data-path="dzb_xjshr" bindtap='navigateTo' class='xz_shr'>{{ currentIndex === 0 ? '新增发货人' : '新增收货人' }}</view>
+</view>

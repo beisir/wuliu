@@ -1,0 +1,30 @@
+<!--pages/wdcx/wdcx.wxml-->
+<view class='wdcx_1'>
+  <view class='screeningTop'>
+    <picker class='branch' mode="region" bindchange="bindPickerChange" value="{{chooseAddress}}">
+      <view class="branch_1">
+        省份城市：
+      </view>
+      <view class='branch_2_1'>{{chooseAddress[0]}}，{{chooseAddress[1]}}，{{chooseAddress[2]}}</view>
+    </picker>
+  </view>
+  <view class='screeningTop'>
+    <picker class='branch' data-type="l" bindchange="bindPickerChangeL" range-key="name" value="{{lIndex}}" range="{{allLogistics}}">
+      <view class="branch_1">
+        物流品牌: 
+      </view>
+      <view class='branch_2_1'>{{allLogistics[lIndex].name}}</view>
+    </picker>
+  </view>
+</view>
+
+<modal hidden="{{hiddenmodalput}}" title="{{modalputName}}" style="width: 100%;height: 100%;position: relative;" confirm-text="下单" cancel-text="取消" bindcancel="modalCancel" bindconfirm="modalConfirm">
+  <view>
+   {{modalputContent}}
+  </view>
+  <view class='.fahuo_box3' bindtap='callPhone'>
+    <image style='width:60rpx;height:60rpx;' src='../../image/phone.png'></image>
+  </view>
+</modal>
+
+<map hidden='{{mapShow}}' show-location longitude="{{coordinate.lng ? coordinate.lng : ''}}" latitude="{{coordinate.lat ? coordinate.lat : ''}}" id="myMap" scale="14" markers="{{markers}}" bindmarkertap="markertap" style="width: 100%; height: calc(100% - 280rpx);"></map>

@@ -1,0 +1,3 @@
+/* pages/my_dd_fhjl/my_dd_fhjl.wxss */
+
+.filtrate {padding: 0 40rpx 0 30rpx; line-height: 90rpx;display: flex;justify-content: space-between;background-color:#fff;}

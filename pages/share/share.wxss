@@ -1,0 +1,271 @@
+/**index.wxss**/
+
+/*.userinfo{display: flex;flex-direction: column;align-items: center;}
+.userinfo-avatar {width: 128rpx;height: 128rpx;margin: 20rpx;border-radius: 50%;}
+.userinfo-nickname {color: #aaa;}
+.usermotto { margin-top: 200px;}
+*/
+
+image {
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+}
+
+.box1, .box2, .box3, .box4, .box5, .box6 {
+  width: 100%;
+  position: relative;
+}
+
+.box1 image {
+  width: 100%;
+  height: 434rpx;
+}
+
+.box2 image {
+  width: 100%;
+  height: 550rpx;
+}
+
+.box3 image.imgbg3 {
+  width: 100%;
+  height: 1204rpx;
+}
+
+.box4 image {
+  width: 100%;
+  height: 853rpx;
+}
+
+.box5 image {
+  width: 100%;
+  height: 731rpx;
+}
+
+.box6 image {
+  width: 100%;
+  height: 378rpx;
+}
+
+.box2 .txt1, .box2 .txt2, .box2 .txt3, .box2 .txt4 {
+  width: 320rpx;
+  height: 25rpx;
+  line-height: 25rpx;
+  font-size: 18rpx;
+  color: #ff5c0f;
+  text-align: center;
+  position: absolute;
+}
+
+.box2 .txt1 .nom, .box2 .txt2 .nom, .box2 .txt3 .nom, .box2 .txt4 .nom {
+  padding: 0 4rpx;
+}
+
+.box2 .txt1 .tsg, .box2 .txt2 .tsg, .box2 .txt3 .tsg, .box2 .txt4 .tsg {
+  padding-left: 10rpx;
+}
+
+.box2 .txt1 {
+  left: 37rpx;
+  top: 295rpx;
+}
+
+.box2 .txt2 {
+  left: 389rpx;
+  top: 295rpx;
+}
+
+.box2 .txt3 {
+  left: 37rpx;
+  top: 471rpx;
+}
+
+.box2 .txt4 {
+  left: 389rpx;
+  top: 471rpx;
+}
+
+.box3 image.img1, .box3 image.img2, .box3 image.img3, .box3 image.img4 {
+  width: 220rpx;
+  height: 220rpx;
+  position: absolute;
+}
+
+.box3 image.img1 {
+  left: 80rpx;
+  top: 240rpx;
+}
+
+.box3 image.img2 {
+  left: 450rpx;
+  top: 240rpx;
+}
+
+.box3 image.img3 {
+  left: 80rpx;
+  top: 785rpx;
+}
+
+.box3 image.img4 {
+  left: 450rpx;
+  top: 785rpx;
+}
+
+.box6 .goBtn1 {
+  width: 738rpx;
+  height: 98rpx;
+  line-height: 98rpx;
+  font-size: 36rpx;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  display: block;
+  position: absolute;
+  left: 6rpx;
+  top: 0;
+}
+
+.box6 .goBtn2 {
+  width: 738rpx;
+  height: 98rpx;
+  line-height: 98rpx;
+  font-size: 36rpx;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  display: block;
+  position: absolute;
+  left: 6rpx;
+  top: 124rpx;
+}
+
+.box7 {
+  width: 100%;
+  height: 112rpx;
+  background: url(https://style.org.hc360.com/images/logistics/0823/wl9_x_img_06.png) no-repeat;
+  background-size: 100% 112rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.box7 .goBtn3 {
+  width: 268rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 40rpx;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  display: block;
+  position: absolute;
+  left: 85rpx;
+  top: 24rpx;
+  background:transparent;
+}
+
+.box7 .goBtn4 {
+  width: 268rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 40rpx;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  display: block;
+  position: absolute;
+  left: 400rpx;
+  top: 24rpx;
+  background:transparent;
+}
+
+.popBox {
+  background: rgba(0, 0, 0, .7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popBox .bg {
+  /* width: 100%;
+  height: 100%; */
+  background: rgba(0, 0, 0, 0.7);
+  background: #000;
+  opacity: 0.7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+}
+
+.popCon {
+  width: 749rpx;
+  height: 698rpx;
+  background: url(https://style.org.hc360.com/images/logistics/0823/wl9_x_img_12.png) no-repeat;
+  background-size: 749rpx 698rpx;
+  /* position: absolute;
+  left: 50%;
+  top: 50%; */
+  /* margin-left: -374rpx; */
+  /* margin-top: -349rpx; */
+  position: relative;
+  z-index: 999;
+}
+
+.close {
+  width: 58rpx;
+  height: 52rpx;
+  position: absolute;
+  top: 0;
+  right: 63rpx;
+  display: block;
+}
+
+.popTxt {
+  width: 380rpx;
+  position: absolute;
+  left: 175rpx;
+  top: 310rpx;
+  z-index: 999;
+}
+
+.popCon .nom {
+  font-size: 90rpx;
+  color: #fff;
+  line-height: 90rpx;
+  height: 90rpx;
+  font-weight: bolder;
+  padding-left: 50rpx;
+}
+
+.popCon .data {
+  font-size: 26rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 30rpx;
+}
+
+.popCon .name {
+  font-size: 18rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 20rpx;
+}
+
+.popCon .tsg {
+  text-align: center;
+  color: #fff;
+  font-size: 26rpx;
+  padding-top: 80rpx;
+  line-height: 38rpx;
+  font-weight: 600;
+}

@@ -1,0 +1,88 @@
+<!--pages/fahuo/fahuo.wxml-->
+<view class='fhbox'>
+  <view bindtap='reverseAddressList' class='fhico'></view>
+  <view class='fhbox_4' wx:for="{{addressList}}" wx:key="{{index}}">
+    <view class='{{index == 0 ? "fhbox_2" : "fhbox_3"}}'></view>
+    <view bindtap='pullDownInputShow' data-index="{{index}}">
+      <!-- 收/发货人 -->
+      <view wx:if="{{item.area || item.address}}" class='fhbox_4_1'>{{item.area || ''}} {{item.address || ''}}</view>
+      <view wx:else class='fhbox_4_1'>{{index === 0 ? '请输入收货信息' : '请输入收货信息'}}</view>
+    </view>
+    <!-- <view bindtap='pullDownInputShow' data-index="{{index}}" wx:else>{{index === 0 ? '请输入发货人信息' : '请选择收货地址'}}</view> -->
+    <view wx:show="{{pullDownInputShowStatus[index]}}" class='xiala' style='height: {{pullDownInputShowStatus[index] ? "128rpx" : "0" }}'>
+      <!-- 选择省市区 -->
+      <view class='b_r_li1' style='padding:5rpx 20rpx;'>
+        <!-- <input placeholder='黑龙江省 哈尔滨市 南岗区' class='b_r_ipt'></input> -->
+        <picker data-index="{{index}}" class='b_r_ipt' mode="region" bindchange="bindRegionChange" value="{{region[index]}}">
+          <view class="picker">
+            {{region[index][0]}}，{{region[index][1]}}，{{region[index][2]}}
+          </view>
+        </picker>
+      </view>
+      <!-- 详细地址 -->
+      <input confirm-type="done" data-index="{{index}}" bindfocus="focusLinkman" bindconfirm="blurLinkman" bindinput="inputLinkman" data-type="address" value='{{item.address || ""}}' placeholder-class="phcolor" class='fhbox_4_2' type='text' placeholder='详细地址'
+      />
+      <view data-type="{{index}}" bindtap="chooseAddress" class='gd_dz'>更多地址></view>
+    </view>
+    <view bindtap='chooseAddress' data-type="{{index}}" class='{{index == 0 ? "fhbox_5" : "fhbox_5_ico"}}'></view>
+  </view>
+</view>
+
+<!-- 联想地址 -->
+<scroll-view style="height:calc(100% - 400rpx)" scroll-y hidden='{{!addressThinkShowStatus}}' class='dizhi'>
+  <block wx:if="{{!addressThinkHistoryStatus}}">
+    <view wx:if="{{addressThinkRenderData.length !== 0}}" style='padding:0 30rpx;'>
+      <view style='width:95%;' class='dizhi_1' data-item='{{item}}' bindtap='chooseThinkAddress' wx:for="{{addressThinkRenderData}}" wx:key="index">
+        <view style='flex: 1 1 auto;width:70%;'>
+          <view style='font-size:28rpx;color:black;overflow:hidden;text-overflow:ellipsis;white-space: nowrap;'>{{item.name || ''}}</view>
+          <view style='overflow:hidden;text-overflow:ellipsis;white-space: nowrap;'>{{item.address || ''}}</view>
+        </view>
+        <view style='flex: 0 0 auto;' class='juli'>{{item.distanceStr || ''}}</view>
+      </view>
+    </view>
+    <view style='text-align:center;font-size:24rpx;color:#999;' wx:else>没有搜到附近相关地址，请重新尝试.</view>
+  </block>
+  <!-- 历史记录 -->
+  <block wx:else>
+    <view wx:if="{{addressThinkHistoryRenderData.length !== 0}}" style='padding:0 30rpx;'>
+      <view style='width:95%;' class='dizhi_1' data-item='{{item}}' bindtap='chooseThinkAddress' wx:for="{{addressThinkHistoryRenderData}}" wx:key="index">
+        <view style='flex: 1 1 auto;width:70%;'>
+          <view style='font-size:28rpx;color:black;overflow:hidden;text-overflow:ellipsis;white-space: nowrap;'>{{item.name || ''}}</view>
+          <view style='overflow:hidden;text-overflow:ellipsis;white-space: nowrap;'>{{item.address || ''}}</view>
+        </view>
+        <!-- 距离 -->
+        <view style='flex: 0 0 auto;' class='juli'>{{item.distanceStr || ''}}</view>
+      </view>
+    </view>
+    <view style='text-align:center;font-size:24rpx;color:#999;' wx:else>没有历史记录</view>
+    <button bindtap='clearAddressHistory' class='clearAddressHistory'>清空历史记录</button>
+  </block>
+</scroll-view>
+<!-- 更改 -->
+<view class='fhbox_6' hidden='{{addressThinkShowStatus}}'>
+  <view class='fhbox_6_1'>已为您精准匹配出
+    <text style='color:red;'>{{allLogistic.logisticNum || 0}}</text>个物流商共
+    <text style='color:red;'>{{allLogistic.lineNum || 0}}</text>条线路，点击图标查看物流商</view>
+</view>
+
+<map hidden='{{mapShow || addressThinkShowStatus}}' longitude="{{coordinate.lng ? coordinate.lng : ''}}" latitude="{{coordinate.lat ? coordinate.lat : ''}}" id="map" scale="14" markers="{{markers}}" bindmarkertap="markertap" show-location style="width: 100%; height: calc(100% - 240rpx);"></map>
+
+<!--网点线路列表弹框-->
+<modal hidden="{{hiddenmodalput}}" title="{{modalputName}}" style="width: 100%;height: 100%;position: relative" confirm-text="发货" cancel-text="取消" bindcancel="modalCancel" bindconfirm="modalConfirm">
+  <view class='.fahuo_box3' bindtap='callPhone'>
+    <image style='width:60rpx;height:60rpx;' src='../../image/phone.png'></image>
+  </view>
+  <radio-group bindchange="checkedLine" style="padding:10rpx 20rpx;">
+    <label wx:for="{{lineInfoList}}" wx:key="{{index}}">
+      <radio color="fd473c" style='width:100%;padding:10rpx 0;border-bottom:1px solid #eee;' value="{{index}}">
+        <view>{{item.vu || ''}} {{item.pt || ''}}{{item.heavyPrice || ''}}/公斤
+          <text style='color: #fd473c;'>{{item.heavySale || ''}})</text>
+        </view>
+        <view>{{item.lightPrice || ''}}/立方
+          <text style='color: #fd473c;'>{{item.heavySale || ''}})</text>
+        </view>
+        <view>最低一票: {{item.et}}元</view>
+      </radio>
+    </label>
+  </radio-group>
+</modal>

@@ -1,0 +1,50 @@
+<!--pages/score_2/index.wxml-->
+<view class='evaluateBox'>
+  <view class='evaluateList'>
+    <text class='e_txt_l'>描述相符</text>
+    <view class='starCon'>
+      <icon class='s_1'></icon>
+      <icon class='s_1'></icon>
+      <icon class='s_1'></icon>
+      <icon class='s_1'></icon>
+      <icon class='s_1'></icon>
+    </view>
+    <text class='e_txt_r'>非常好</text>
+  </view>
+
+  <view class='evaluateList'>
+    <text class='e_txt_l'>响应时间</text>
+    <view class='starCon'>
+      <icon class='s_2'></icon>
+      <icon class='s_2'></icon>
+      <icon class='s_2'></icon>
+      <icon class='s_2'></icon>
+      <icon class='s_2'></icon>
+    </view>
+  </view>
+
+  <view class='evaluateList'>
+    <text class='e_txt_l'>发货速度</text>
+    <view class='starCon'>
+      <icon class='s_2'></icon>
+      <icon class='s_2'></icon>
+      <icon class='s_2'></icon>
+      <icon class='s_2'></icon>
+      <icon class='s_2'></icon>
+    </view>
+  </view>
+
+</view>
+
+<view class='w_bot'>发布</view>
+
+<view class='popBox'>
+  <view class="mask"></view>
+  <view class='popCon'>
+    <text class='popTil'>确认取消发布吗？</text>
+    <view class='bnCon'>
+      <text class='btn1'>继续发布</text>
+      <text class='btn2'>确认取消</text>
+    </view>
+  </view>
+</view>

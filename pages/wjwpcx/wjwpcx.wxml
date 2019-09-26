@@ -1,0 +1,21 @@
+<!--pages/wjwpcx/wjwpcx.wxml-->
+<view class='p20'>
+    <view class='b_r_1'>
+        <view class='wjwp_1'>
+            在正常的运输状态下，易爆炸、发生危险反应、产生火焰或危险的热量，或易释放毒性、腐蚀性的发散物、易燃气体或蒸汽的物质，在任何情况下都禁止运输。目前每家物流公司禁用品规则规范都是具备不同的要求，因此有些品类物质的物流运输中应格外注意，具体禁用品如下。
+        </view>
+    </view>
+</view>
+<view class='p20'>
+    <view class='b_r_1'>
+        <block wx:for='{{ nosport }}' wx:key='{{ item.title }}'>
+            <navigator class='wjwp_2' url='/pages/wjsmy/wjsmy?src={{ item.path }}'>{{ item.title }}</navigator>
+        </block>
+            <!-- <view class='wjwp_2'>天地华宇物流禁运品说明</view>
+            <view class='wjwp_2'>新邦物流禁运品说明</view>
+            <view class='wjwp_2'>景光物流禁运品说明</view>
+            <view class='wjwp_2'>佳怡物流禁运品说明</view>
+            <view class='wjwp_2'>德邦物流禁运品说明</view>
+            <view class='wjwp_2'>中铁物流禁运品说明</view> -->
+    </view>
+</view>

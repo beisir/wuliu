@@ -1,0 +1,21 @@
+<!--pages/wlzz/wlzz.wxml-->
+<view class='topSearch_3'>
+  <view class='searchCon_3'>
+    <input class="phcolor_3" type='text' placeholder='123456787887878' /> 
+    <view class='wlgz_yy'></view>
+  </view>
+
+</view>
+
+
+<view class='p20'>
+ <view class='wlzz_1'></view>
+</view>
+
+<view class='p20'>
+  <view class='wlzz_2'>操作建议</view>
+  <view class='wlzz_3'>1.请确认该运单是否是在本平台下的单。</view>
+  <view class='wlzz_3'>2.请您仔细核对运单号码。</view>
+  <view class='wlzz_3'>3.刚发的物流，需要第二天才可以查到。</view>
+  <view class='wlzz_3'>4.历史单号一段时间后会失效。</view>
+</view>

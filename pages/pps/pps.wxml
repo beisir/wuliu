@@ -1,0 +1,24 @@
+<!--pages/pps/pps.wxml-->
+<view class='topSearch_1'>
+    <view class='searchCon_1'>
+        <input class="phcolor_1" type='text' placeholder='北京  上海  线路' />
+    </view>
+</view>
+
+<block wx:for='{{ wllist }}' wx:key='{{ item.title }}'>
+    <view class='p20'>
+        <view class='pps_2'>
+            <view class='pps_3_1{{  }}'>{{ item.title }}</view>
+        </view>
+    </view>
+</block>
+
+
+<!-- <view class='pps_1'>T</view> -->
+<!-- <view class='p20'>
+    <view class='pps_2'>
+        <view class='pps_3'>天地华宇</view>
+    </view>
+</view> -->
+
+<view class='pps_qr'>确认</view>
